@@ -70,6 +70,7 @@ spec:
                         echo "Max restman ready wait attempted (max={{ $.Values.installSolutionKits.restmanReadyWaitMaxAttempt }}, interval={{ $.Values.installSolutionKits.restmanReadyWaitInterval }} )." >&2
                         exit 1
                       fi
+                      echo "Testing before sleep"
                       sleep {{ $.Values.installSolutionKits.restmanReadyWaitInterval }}
                     done
                     {{- range .Values.installSolutionKits.solutionKits }}
