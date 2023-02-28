@@ -75,6 +75,7 @@ spec:
                     {{- range .Values.installSolutionKits.solutionKits }}
                     {{ .preInstallCommand }}
                     curl --user {{ $.Values.management.username }}:{{ $.Values.management.password }} -k https://127.0.0.1:{{ $.Values.installSolutionKits.restmanPort }}/restman/1.0/solutionKitManagers {{ .param }} --form "file=@/tmp/{{ .file }}"
+                    {{ .postInstallCommand }}
                     echo "Testing.... post step in branch new ps673659"
                     {{- end }}
           {{- end }}
