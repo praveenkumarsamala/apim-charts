@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+  <l7:References>
+    <l7:Item>
+      <l7:Name>signature</l7:Name>
+      <l7:Id>8bfd94110f6ce71fecf1e11e99a9cb92</l7:Id>
+      <l7:Type>FOLDER</l7:Type>
+      <l7:TimeStamp>2020-10-30T10:26:07.686-07:00</l7:TimeStamp>
+      <l7:Resource>
+        <l7:Folder folderId="71489e6b3f531c24ce7c374951175634" id="8bfd94110f6ce71fecf1e11e99a9cb92" version="0">
+          <l7:Name>signature</l7:Name>
+        </l7:Folder>
+      </l7:Resource>
+    </l7:Item>
+    <l7:Item>
+      <l7:Name>Internal Identity Provider</l7:Name>
+      <l7:Id>0000000000000000fffffffffffffffe</l7:Id>
+      <l7:Type>ID_PROVIDER_CONFIG</l7:Type>
+      <l7:TimeStamp>2020-10-30T10:26:07.979-07:00</l7:TimeStamp>
+      <l7:Resource>
+        <l7:IdentityProvider id="0000000000000000fffffffffffffffe" version="0">
+          <l7:Name>Internal Identity Provider</l7:Name>
+          <l7:IdentityProviderType>Internal</l7:IdentityProviderType>
+        </l7:IdentityProvider>
+      </l7:Resource>
+    </l7:Item>
+    <l7:Item>
+      <l7:Name>sign_user</l7:Name>
+      <l7:Id>8bfd94110f6ce71fecf1e11e99a9cb44</l7:Id>
+      <l7:Type>USER</l7:Type>
+      <l7:TimeStamp>2020-10-30T10:26:08.035-07:00</l7:TimeStamp>
+      <l7:Resource>
+        <l7:User providerId="0000000000000000fffffffffffffffe" id="8bfd94110f6ce71fecf1e11e99a9cb44">
+          <l7:Login>sign_user</l7:Login>
+          <l7:Password bundleKey="$L7C2$1bead,718Ex9DMV0I3UTHdSTdpJ7rpy+U7aK/PGS5//N82K7k=$+UqxNCOJ67LGpmqJFaDecubKow1xGE3DKPhRDXDFlYRLFVz6fLD445LHWRD/7k9o5a51BtTt4PuW432tindOew/2vyVGnp96R9nKT/HWR7AlraXNsFPFDweOpFZk0v66" format="bundleKey:sha512crypt">$L7C2$1,zpadhIGW2q6P/AaBYcJkE3NQC6a2urj4uDXue0OgJXw=$ChsSUGBgCmpbm6nwAY14KNhwxnFvlHO3Zz8Z8DCzIHn9FI4+9VADY/ghgUxw/BkjQjaH15foB6vzs695007Iv8TZMSRfnGaZphRHWVB71biHvwUhTq+Vo/24Iz9aQgnqUFoX1cllLYphy6UPl4+O/0qYd0HbIdsTEB1S2xAd7hlWBFYwYqwpIwkgv6JGs2X5aRCZiBuQm8Df5izprmxmHQ==</l7:Password>
+          <l7:FirstName></l7:FirstName>
+          <l7:LastName></l7:LastName>
+          <l7:Email></l7:Email>
+          <l7:Properties>
+            <l7:Property key="accountExpiration">
+              <l7:LongValue>-1</l7:LongValue>
+            </l7:Property>
+            <l7:Property key="enabled">
+              <l7:BooleanValue>true</l7:BooleanValue>
+            </l7:Property>
+            <l7:Property key="name">
+              <l7:StringValue>sign_user</l7:StringValue>
+            </l7:Property>
+          </l7:Properties>
+          <l7:Extension>
+            <l7:CertificateData>
+              <l7:IssuerName>CN%3Dsign_user</l7:IssuerName>
+              <l7:SerialNumber>15967069340983657807</l7:SerialNumber>
+              <l7:SubjectName>CN%3Dsign_user</l7:SubjectName>
+              <l7:Encoded>MIIC7TCCAdWgAwIBAgIJAN2WbPftXIVPMA0GCSqGSIb3DQEBDAUAMBQxEjAQBgNVBAMMCXNpZ25fdXNlcjAeFw0yMDEwMjcyMDM5NDRaFw0yNTEwMjYyMDM5NDRaMBQxEjAQBgNVBAMMCXNpZ25fdXNlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALh0HZzZaHH1YbnTw+uaHZjxI1/SHYfnyTBwWVz6sBGUJ9BPPiVqlwI/NLmzfu34wvyWr5uUbiWsvaNHDUgHh0lKtv3rRV+PkFnk8B8bAjnVNNUr3LQSELMbYYpXn61mgnHFSkunMF2Zo42UW/PCKTTBwZDEz+XnlKRetvzkdZ5kNCM8YbOV8otXl1I32azGIN+xl1ehZJiBhf7xlfYKfr/of2C7vjI+bsVs+9YMkm5hbqbiXC3ceu7J3Gi+IAhnFt44rkY9S8louV4wjjcISQd0JrFwWq590I6yicgCkTQlrtZRTp5kWiBXBMmkZZcI0OQCTzZucmuFn9NXU1Ax8scCAwEAAaNCMEAwHQYDVR0OBBYEFHdCRZ+lUOUWu+l+zhVJjwaufD0WMB8GA1UdIwQYMBaAFHdCRZ+lUOUWu+l+zhVJjwaufD0WMA0GCSqGSIb3DQEBDAUAA4IBAQBY2FO3oknQ65D7zAzP/VF1b24t+jv9+COSDWK/D68Qi45H+69Z/Qi8X3070Sb6Jq5z1JYJdFdMq23NLEAmTfKFeoXkGtlLDUPTw6OLNPpTCr8CuCCcsQ8Ja960qBL+o2hoojOWoQyCmyVKMvIe1BBpCnIBIhIwUZArs1v9EtF8muL2BMwYGrAfDbLgGW7m3dct5npSm61cABYHNUOvlayRrEE1QFyK3CjRbKXjfRzgYkSr+G6dEISfUEQH1fcPit7LwMW5uk65dXAFvcx3W4mK2/KsR5L6Mu25IdV6FWaS2yuw4ecqK4hVlt8KOK3iioRvt0sqoiJi39JUIfMD7GU5</l7:Encoded>
+            </l7:CertificateData>
+          </l7:Extension>
+        </l7:User>
+      </l7:Resource>
+    </l7:Item>
+    <l7:Item>
+      <l7:Name>verify</l7:Name>
+      <l7:Id>8bfd94110f6ce71fecf1e11e99a9bf03</l7:Id>
+      <l7:Type>SERVICE</l7:Type>
+      <l7:TimeStamp>2020-10-30T10:26:08.067-07:00</l7:TimeStamp>
+      <l7:Resource>
+        <l7:Service id="8bfd94110f6ce71fecf1e11e99a9bf03" version="4">
+          <l7:ServiceDetail folderId="8bfd94110f6ce71fecf1e11e99a9cb92" id="8bfd94110f6ce71fecf1e11e99a9bf03" version="4">
+            <l7:Name>verify</l7:Name>
+            <l7:Enabled>true</l7:Enabled>
+            <l7:ServiceMappings>
+              <l7:HttpMapping>
+                <l7:UrlPattern>/verifySignature</l7:UrlPattern>
+                <l7:Verbs>
+                  <l7:Verb>GET</l7:Verb>
+                  <l7:Verb>POST</l7:Verb>
+                  <l7:Verb>PUT</l7:Verb>
+                  <l7:Verb>DELETE</l7:Verb>
+                </l7:Verbs>
+              </l7:HttpMapping>
+            </l7:ServiceMappings>
+            <l7:Properties>
+              <l7:Property key="hasRouting">
+                <l7:BooleanValue>true</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="internal">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="policyRevision">
+                <l7:LongValue>9</l7:LongValue>
+              </l7:Property>
+              <l7:Property key="soap">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="tracingEnabled">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="wssProcessingEnabled">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+            </l7:Properties>
+          </l7:ServiceDetail>
+          <l7:Resources>
+            <l7:ResourceSet tag="policy">
+              <l7:Resource type="policy" version="8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                &lt;L7p:CommentAssertion&gt;
+                &lt;L7p:Comment stringValue=&quot;Audit assertions are for debugging. Disable them otherwise. Returns HTTP 200 if signature is verified successfully, and HTTP 500 if not.&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:CommentAssertion&gt;
+                &lt;L7p:AuditAssertion&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;L7p:SaveRequest booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:SaveResponse booleanValue=&quot;true&quot;/&gt;
+                &lt;/L7p:AuditAssertion&gt;
+                &lt;L7p:FaultLevel&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;L7p:LevelInfo soapFaultLevel=&quot;included&quot;&gt;
+                &lt;L7p:Level intValue=&quot;4&quot;/&gt;
+                &lt;/L7p:LevelInfo&gt;
+                &lt;/L7p:FaultLevel&gt;
+                &lt;L7p:NonSoapVerifyElement&gt;
+                &lt;L7p:VariablePrefix stringValueNull=&quot;null&quot;/&gt;
+                &lt;/L7p:NonSoapVerifyElement&gt;
+                &lt;L7p:AuditDetailAssertion&gt;
+                &lt;L7p:Detail stringValue=&quot;elementsVerified:${elementsVerified}&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:AuditDetailAssertion&gt;
+                &lt;L7p:AuditDetailAssertion&gt;
+                &lt;L7p:Detail stringValue=&quot;${request}&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:AuditDetailAssertion&gt;
+                &lt;L7p:NonSoapCheckVerifyResults&gt;
+                &lt;L7p:PermittedDigestMethodUris stringArrayValue=&quot;included&quot;&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmlenc#sha512&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#sha384&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot;/&gt;
+                &lt;/L7p:PermittedDigestMethodUris&gt;
+                &lt;L7p:PermittedSignatureMethodUris stringArrayValue=&quot;included&quot;&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2000/09/xmldsig#dsa-sha1&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot;/&gt;
+                &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384&quot;/&gt;
+                &lt;/L7p:PermittedSignatureMethodUris&gt;
+                &lt;L7p:VariablePrefix stringValueNull=&quot;null&quot;/&gt;
+                &lt;L7p:XpathExpression xpathExpressionValue=&quot;included&quot;&gt;
+                &lt;L7p:Expression stringValue=&quot;breakfast_menu&quot;/&gt;
+                &lt;L7p:Namespaces mapValue=&quot;included&quot;&gt;
+                &lt;L7p:entry&gt;
+                &lt;L7p:key stringValue=&quot;xenc&quot;/&gt;
+                &lt;L7p:value stringValue=&quot;http://www.w3.org/2001/04/xmlenc#&quot;/&gt;
+                &lt;/L7p:entry&gt;
+                &lt;L7p:entry&gt;
+                &lt;L7p:key stringValue=&quot;ds&quot;/&gt;
+                &lt;L7p:value stringValue=&quot;http://www.w3.org/2000/09/xmldsig#&quot;/&gt;
+                &lt;/L7p:entry&gt;
+                &lt;/L7p:Namespaces&gt;
+                &lt;L7p:XpathVersion xpathVersion=&quot;XPATH_1_0&quot;/&gt;
+                &lt;/L7p:XpathExpression&gt;
+                &lt;/L7p:NonSoapCheckVerifyResults&gt;
+                &lt;L7p:SpecificUser&gt;
+                &lt;L7p:IdentityProviderOid goidValue=&quot;0000000000000000fffffffffffffffe&quot;/&gt;
+                &lt;L7p:UserLogin stringValue=&quot;sign_user&quot;/&gt;
+                &lt;L7p:UserName stringValue=&quot;sign_user&quot;/&gt;
+                &lt;L7p:UserUid stringValue=&quot;8bfd94110f6ce71fecf1e11e99a9cb44&quot;/&gt;
+                &lt;/L7p:SpecificUser&gt;
+                &lt;L7p:AuditDetailAssertion&gt;
+                &lt;L7p:Detail stringValue=&quot;signatureMethodUris:${signatureMethodUris}&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:AuditDetailAssertion&gt;
+                &lt;L7p:AuditDetailAssertion&gt;
+                &lt;L7p:Detail stringValue=&quot;signingCertificates:${signingCertificates}&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:AuditDetailAssertion&gt;
+                &lt;L7p:AuditDetailAssertion&gt;
+                &lt;L7p:Detail stringValue=&quot;signatureValues:${signatureValues}&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:AuditDetailAssertion&gt;
+                &lt;L7p:AuditDetailAssertion&gt;
+                &lt;L7p:Detail stringValue=&quot;signatureElements:${signatureElements}&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:AuditDetailAssertion&gt;
+                &lt;L7p:EchoRoutingAssertion/&gt;
+                &lt;/wsp:All&gt;
+                &lt;/wsp:Policy&gt;
+              </l7:Resource>
+            </l7:ResourceSet>
+          </l7:Resources>
+        </l7:Service>
+      </l7:Resource>
+    </l7:Item>
+    <l7:Item>
+      <l7:Name>sign_user</l7:Name>
+      <l7:Id>00000000000000000000000000000002:sign_user</l7:Id>
+      <l7:Type>SSG_KEY_ENTRY</l7:Type>
+      <l7:TimeStamp>2020-10-30T10:26:08.068-07:00</l7:TimeStamp>
+      <l7:Resource>
+        <l7:PrivateKey alias="sign_user" keystoreId="00000000000000000000000000000002" id="00000000000000000000000000000002:sign_user">
+          <l7:CertificateChain>
+            <l7:CertificateData>
+              <l7:IssuerName>CN%3Dsign_user</l7:IssuerName>
+              <l7:SerialNumber>15967069340983657807</l7:SerialNumber>
+              <l7:SubjectName>CN%3Dsign_user</l7:SubjectName>
+              <l7:Encoded>MIIC7TCCAdWgAwIBAgIJAN2WbPftXIVPMA0GCSqGSIb3DQEBDAUAMBQxEjAQBgNVBAMMCXNpZ25fdXNlcjAeFw0yMDEwMjcyMDM5NDRaFw0yNTEwMjYyMDM5NDRaMBQxEjAQBgNVBAMMCXNpZ25fdXNlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALh0HZzZaHH1YbnTw+uaHZjxI1/SHYfnyTBwWVz6sBGUJ9BPPiVqlwI/NLmzfu34wvyWr5uUbiWsvaNHDUgHh0lKtv3rRV+PkFnk8B8bAjnVNNUr3LQSELMbYYpXn61mgnHFSkunMF2Zo42UW/PCKTTBwZDEz+XnlKRetvzkdZ5kNCM8YbOV8otXl1I32azGIN+xl1ehZJiBhf7xlfYKfr/of2C7vjI+bsVs+9YMkm5hbqbiXC3ceu7J3Gi+IAhnFt44rkY9S8louV4wjjcISQd0JrFwWq590I6yicgCkTQlrtZRTp5kWiBXBMmkZZcI0OQCTzZucmuFn9NXU1Ax8scCAwEAAaNCMEAwHQYDVR0OBBYEFHdCRZ+lUOUWu+l+zhVJjwaufD0WMB8GA1UdIwQYMBaAFHdCRZ+lUOUWu+l+zhVJjwaufD0WMA0GCSqGSIb3DQEBDAUAA4IBAQBY2FO3oknQ65D7zAzP/VF1b24t+jv9+COSDWK/D68Qi45H+69Z/Qi8X3070Sb6Jq5z1JYJdFdMq23NLEAmTfKFeoXkGtlLDUPTw6OLNPpTCr8CuCCcsQ8Ja960qBL+o2hoojOWoQyCmyVKMvIe1BBpCnIBIhIwUZArs1v9EtF8muL2BMwYGrAfDbLgGW7m3dct5npSm61cABYHNUOvlayRrEE1QFyK3CjRbKXjfRzgYkSr+G6dEISfUEQH1fcPit7LwMW5uk65dXAFvcx3W4mK2/KsR5L6Mu25IdV6FWaS2yuw4ecqK4hVlt8KOK3iioRvt0sqoiJi39JUIfMD7GU5</l7:Encoded>
+            </l7:CertificateData>
+          </l7:CertificateChain>
+          <l7:Properties>
+            <l7:Property key="keyAlgorithm">
+              <l7:StringValue>RSA</l7:StringValue>
+            </l7:Property>
+            <l7:Property key="keyData">
+              <l7:StringValue bundleKey="$L7C2$1bead,718Ex9DMV0I3UTHdSTdpJ7rpy+U7aK/PGS5//N82K7k=$+UqxNCOJ67LGpmqJFaDecubKow1xGE3DKPhRDXDFlYRLFVz6fLD445LHWRD/7k9o5a51BtTt4PuW432tindOew/2vyVGnp96R9nKT/HWR7AlraXNsFPFDweOpFZk0v66" algorithm="RSA">$L7C2$1,wQV8mJ/Gv4NrblPVV9YeOMbwSC9OWICC7i0YvUP8r24=$i9wKgatLyuIiCZxjE3boLuiK9azQ3Rpk8kjpwW77NaTmfsHMV2bQTjaB0LrnkhOxaXTtfR0EsnFYEHqaTxDVzrbZhVcptEe+BqS1UA++aae+gEhXMG0L6VjnBviM5sra1Fl/gcSfYtbJODT+gh0Trfg83GkiG9rVC/ola07yRt962Q0Bkfkzae4T9prOdmQLe8MfOeMuoOankteN8IReQfgQHO6Od1Y2LAttEm87Sf+F8e4s8p7wnvCVPV3qE7EQAOCpkVMiBlEMZL1yMslQFjWKkoJWABsb3+BCOcJV7+Qv+70tErS8pc2AD/M5BhAXdoznnXluT9i1NoBzt6azfJrK53/yqbASmwWkPJ4WOE45M6U0pAUcBB411VmD3f2WKgBrqOUobANWCWtwYjdjq6Oc9/ad4Wy6YMyr+XBzihM3dOo8lJWznorv9+Qo73euT2O7e43h93sdzWAm2LIU7HN9OULQKiXiew98QxcS7N5EJcwwjKLbiFXF+YjGYILLo55jYSBJ1wibXXo60Hw2uvbIiiOXDfnj59Q6emzgVNby8C27f/pU5spQ1LPxS16oNHHOc5Og6j9vAhdkYRI7+voGhBeKgNjfi1AprMw/YXtuIDKBRJqFmbmPupN5fUd7/kbpTPSvo9+bqMEbwX+6oRSLv6mMro0eS0avqDoddWch5YlsplPkZ8uKeyBuTltEx1r3i/solqAy+gjaBd+j4srZgCeFjkieW7BesRWMmi86KzA/mSL2edQu+u+FpS68p1hrQkhjzkMeKdAZ/7zV5iczdObp3olDGPB8/DiZxITZTqUSMhwxv/rnponXaTaTNCJrGiTk7A9E0z2lvNiWlaMFf40dUJUTVGU3gZinbii0xPXgio+jDnCROR18sLIyZ4dqd/OWBWAJGVecHyQch9FTd/iDAiOlmAse465Y1RN4/xeDXfxbbe1Hfqk9dmjOAaIBulY+3+1bVfu/y0I91NdNudZWGt5Vk6nvjTegzimg3R8Xuyt+HWnYhBQUVAfKDlbF3QxjOJ5HMQL3U4gTFyllxF1koea/MF+OQKV35yjViCSkJGdkG/Qpl+Spq/VQMKdz8UFeltnNSgQ7NvSIet7c0Vhd7lY+2FpOq7IgfU2s5H29Jsj14VS9yah/r20ANp7wuxgms0CH1c9JMH7nWsXa/rcLYkd7vPniQi8Mxc8T/4zRnd/MgGuG3Th/JC06vWHf6m6+Et9/6izduSI9uu3l0tdC+fdUYynaAawgVEB8oTuz0jwpMrLzGhg30nIST53iBWO87nXQv2Fdkrqz99/kNaTujl/upOZJAErw5iiF4LGnnR94ETOMUoiN+h0m4kGfFvIzO5qcwBM9zhmvENqLAe2nU7KF9aek1Kc4YemBadP0pSWGXWuqTAV1jOlGkaQTBcYO2hnbqRR4V3X6da99bp+1lQgj1+0Ttb2LZ3CfTJ5pWrmsQscppD+vkjh4mXmI0oB/cki20gqYddEU/3CorlOsxie5jXbyXYZtbjYp26tRN3HJQmGNuNaf4E5N937z4flrDpkaEi0eC/DPXr/cm5rkOuPQ4o54JCBpSTD+C/wduSM2G1TVSG+8EM+EhOqtg4GE28FTixEY3ddTSc6bzr8fvHjALZ8o46CwVfJx/6ixiiVwa5Tx5cp/udJRHsM8Iic1GE1MAc9WUUYVaGlu/I67Xiv03lmgZWYx7ZQ=</l7:StringValue>
+            </l7:Property>
+          </l7:Properties>
+        </l7:PrivateKey>
+      </l7:Resource>
+    </l7:Item>
+    <l7:Item>
+      <l7:Name>sign</l7:Name>
+      <l7:Id>8bfd94110f6ce71fecf1e11e99a9bf45</l7:Id>
+      <l7:Type>SERVICE</l7:Type>
+      <l7:TimeStamp>2020-10-30T10:26:08.074-07:00</l7:TimeStamp>
+      <l7:Resource>
+        <l7:Service id="8bfd94110f6ce71fecf1e11e99a9bf45" version="3">
+          <l7:ServiceDetail folderId="8bfd94110f6ce71fecf1e11e99a9cb92" id="8bfd94110f6ce71fecf1e11e99a9bf45" version="3">
+            <l7:Name>sign</l7:Name>
+            <l7:Enabled>true</l7:Enabled>
+            <l7:ServiceMappings>
+              <l7:HttpMapping>
+                <l7:UrlPattern>/sign</l7:UrlPattern>
+                <l7:Verbs>
+                  <l7:Verb>GET</l7:Verb>
+                  <l7:Verb>POST</l7:Verb>
+                  <l7:Verb>PUT</l7:Verb>
+                  <l7:Verb>DELETE</l7:Verb>
+                </l7:Verbs>
+              </l7:HttpMapping>
+            </l7:ServiceMappings>
+            <l7:Properties>
+              <l7:Property key="hasRouting">
+                <l7:BooleanValue>true</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="internal">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="policyRevision">
+                <l7:LongValue>11</l7:LongValue>
+              </l7:Property>
+              <l7:Property key="soap">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="tracingEnabled">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+              <l7:Property key="wssProcessingEnabled">
+                <l7:BooleanValue>false</l7:BooleanValue>
+              </l7:Property>
+            </l7:Properties>
+          </l7:ServiceDetail>
+          <l7:Resources>
+            <l7:ResourceSet tag="policy">
+              <l7:Resource type="policy" version="11">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                &lt;L7p:CommentAssertion&gt;
+                &lt;L7p:Comment stringValue=&quot;Audit assertions are for debugging. Disable them otherwise.&quot;/&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:CommentAssertion&gt;
+                &lt;L7p:AuditAssertion&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;L7p:SaveRequest booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:SaveResponse booleanValue=&quot;true&quot;/&gt;
+                &lt;/L7p:AuditAssertion&gt;
+                &lt;L7p:FaultLevel&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;L7p:LevelInfo soapFaultLevel=&quot;included&quot;&gt;
+                &lt;L7p:Level intValue=&quot;4&quot;/&gt;
+                &lt;/L7p:LevelInfo&gt;
+                &lt;/L7p:FaultLevel&gt;
+                &lt;L7p:NonSoapSignElement&gt;
+                &lt;L7p:KeyAlias stringValue=&quot;sign_user&quot;/&gt;
+                &lt;L7p:NonDefaultKeystoreId goidValue=&quot;00000000000000000000000000000002&quot;/&gt;
+                &lt;L7p:Target target=&quot;REQUEST&quot;/&gt;
+                &lt;L7p:UsesDefaultKeyStore booleanValue=&quot;false&quot;/&gt;
+                &lt;L7p:XpathExpression xpathExpressionValue=&quot;included&quot;&gt;
+                &lt;L7p:Expression stringValue=&quot;breakfast_menu&quot;/&gt;
+                &lt;L7p:Namespaces mapValue=&quot;included&quot;&gt;
+                &lt;L7p:entry&gt;
+                &lt;L7p:key stringValue=&quot;xenc&quot;/&gt;
+                &lt;L7p:value stringValue=&quot;http://www.w3.org/2001/04/xmlenc#&quot;/&gt;
+                &lt;/L7p:entry&gt;
+                &lt;L7p:entry&gt;
+                &lt;L7p:key stringValue=&quot;ds&quot;/&gt;
+                &lt;L7p:value stringValue=&quot;http://www.w3.org/2000/09/xmldsig#&quot;/&gt;
+                &lt;/L7p:entry&gt;
+                &lt;/L7p:Namespaces&gt;
+                &lt;L7p:XpathVersion xpathVersion=&quot;XPATH_1_0&quot;/&gt;
+                &lt;/L7p:XpathExpression&gt;
+                &lt;/L7p:NonSoapSignElement&gt;
+                &lt;L7p:HttpRoutingAssertion&gt;
+                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;L7p:ProtectedServiceUrl stringValue=&quot;http://localhost:8080/verifySignature&quot;/&gt;
+                &lt;L7p:ProxyPassword stringValueNull=&quot;null&quot;/&gt;
+                &lt;L7p:ProxyUsername stringValueNull=&quot;null&quot;/&gt;
+                &lt;L7p:RequestHeaderRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+                &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;&gt;
+                &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                &lt;L7p:Name stringValue=&quot;Cookie&quot;/&gt;
+                &lt;/L7p:item&gt;
+                &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                &lt;L7p:Name stringValue=&quot;SOAPAction&quot;/&gt;
+                &lt;/L7p:item&gt;
+                &lt;/L7p:Rules&gt;
+                &lt;/L7p:RequestHeaderRules&gt;
+                &lt;L7p:RequestParamRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+                &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;/&gt;
+                &lt;/L7p:RequestParamRules&gt;
+                &lt;L7p:ResponseHeaderRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+                &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;&gt;
+                &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                &lt;L7p:Name stringValue=&quot;Set-Cookie&quot;/&gt;
+                &lt;/L7p:item&gt;
+                &lt;/L7p:Rules&gt;
+                &lt;/L7p:ResponseHeaderRules&gt;
+                &lt;L7p:SamlAssertionVersion intValue=&quot;2&quot;/&gt;
+                &lt;/L7p:HttpRoutingAssertion&gt;
+                &lt;L7p:EchoRoutingAssertion/&gt;
+                &lt;/wsp:All&gt;
+                &lt;/wsp:Policy&gt;
+              </l7:Resource>
+            </l7:ResourceSet>
+          </l7:Resources>
+        </l7:Service>
+      </l7:Resource>
+    </l7:Item>
+  </l7:References>
+  <l7:Mappings>
+    <l7:Mapping action="NewOrExisting" srcId="8bfd94110f6ce71fecf1e11e99a9cb92" srcUri="http://us589840-95-9643-database.ric.broadcom.net:8080/restman/1.0/folders/8bfd94110f6ce71fecf1e11e99a9cb92" type="FOLDER"/>
+    <l7:Mapping action="NewOrExisting" srcId="0000000000000000fffffffffffffffe" srcUri="http://us589840-95-9643-database.ric.broadcom.net:8080/restman/1.0/identityProviders/0000000000000000fffffffffffffffe" type="ID_PROVIDER_CONFIG">
+      <l7:Properties>
+        <l7:Property key="FailOnNew">
+          <l7:BooleanValue>true</l7:BooleanValue>
+        </l7:Property>
+      </l7:Properties>
+    </l7:Mapping>
+    <l7:Mapping action="NewOrExisting" srcId="8bfd94110f6ce71fecf1e11e99a9cb44" srcUri="http://us589840-95-9643-database.ric.broadcom.net:8080/restman/1.0/identityProviders/0000000000000000fffffffffffffffe/users/8bfd94110f6ce71fecf1e11e99a9cb44" type="USER"/>
+    <l7:Mapping action="NewOrExisting" srcId="8bfd94110f6ce71fecf1e11e99a9bf03" srcUri="http://us589840-95-9643-database.ric.broadcom.net:8080/restman/1.0/services/8bfd94110f6ce71fecf1e11e99a9bf03" type="SERVICE"/>
+    <l7:Mapping action="NewOrExisting" srcId="00000000000000000000000000000002:sign_user" srcUri="http://us589840-95-9643-database.ric.broadcom.net:8080/restman/1.0/privateKeys/00000000000000000000000000000002:sign_user" type="SSG_KEY_ENTRY"/>
+    <l7:Mapping action="NewOrExisting" srcId="8bfd94110f6ce71fecf1e11e99a9bf45" srcUri="http://us589840-95-9643-database.ric.broadcom.net:8080/restman/1.0/services/8bfd94110f6ce71fecf1e11e99a9bf45" type="SERVICE"/>
+  </l7:Mappings>
+</l7:Bundle>

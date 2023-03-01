@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:References>
+        <l7:Item>
+            <l7:Name>signature_verification</l7:Name>
+            <l7:Id>d596e30a71a76eecfef48c68c40ae6ac</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2022-02-16T17:41:54.769-08:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="71489e6b3f531c24ce7c374951175634" id="d596e30a71a76eecfef48c68c40ae6ac" version="0">
+                    <l7:Name>signature_verification</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>Warehouse</l7:Name>
+            <l7:Id>d596e30a71a76eecfef48c68c40ae6f2</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2022-02-16T17:41:54.803-08:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="d596e30a71a76eecfef48c68c40ae6f2" version="1">
+                    <l7:ServiceDetail folderId="d596e30a71a76eecfef48c68c40ae6ac" id="d596e30a71a76eecfef48c68c40ae6f2" version="1">
+                        <l7:Name>Warehouse</l7:Name>
+                        <l7:Enabled>true</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>/soap_signature_verification_input</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>GET</l7:Verb>
+                                    <l7:Verb>POST</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                            <l7:SoapMapping>
+                                <l7:Lax>true</l7:Lax>
+                            </l7:SoapMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="hasRouting">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>3</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="soapVersion">
+                                <l7:StringValue>unspecified</l7:StringValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="2">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+&lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+&lt;L7p:SetVariable&gt;
+    &lt;L7p:Base64Expression stringValue=&quot;PHNvYXBlbnY6RW52ZWxvcGUgeG1sbnM6c29hcGVudj0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZlbG9wZS8iIHhtbG5zOndzPSJodHRwOi8vd2FyZWhvdXNlLmFjbWUuY29tL3dzIj4NCiAgIDxzb2FwZW52OkhlYWRlcj48d3NzZTpTZWN1cml0eSBzb2FwZW52Om11c3RVbmRlcnN0YW5kPSIxIiB4bWxuczp3c3NlPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy93c3MvMjAwNC8wMS9vYXNpcy0yMDA0MDEtd3NzLXdzc2VjdXJpdHktc2VjZXh0LTEuMC54c2QiIHhtbG5zOndzdT0iaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvd3NzLzIwMDQvMDEvb2FzaXMtMjAwNDAxLXdzcy13c3NlY3VyaXR5LXV0aWxpdHktMS4wLnhzZCI+PHdzdTpUaW1lc3RhbXAgd3N1OklkPSJUaW1lc3RhbXAtMi1hZTA4MTc1YzEwN2UzODBjOWU1NGRhZmIwMmVmYzY5ZCI+PHdzdTpDcmVhdGVkPjIwMjItMDItMTdUMDA6MDE6NDEuNzU5MDQwMDA3Wjwvd3N1OkNyZWF0ZWQ+PHdzdTpFeHBpcmVzPjIwMjItMDItMTdUMDA6MDY6NDEuNzU5Wjwvd3N1OkV4cGlyZXM+PC93c3U6VGltZXN0YW1wPjx3c3NlOkJpbmFyeVNlY3VyaXR5VG9rZW4gRW5jb2RpbmdUeXBlPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy93c3MvMjAwNC8wMS9vYXNpcy0yMDA0MDEtd3NzLXNvYXAtbWVzc2FnZS1zZWN1cml0eS0xLjAjQmFzZTY0QmluYXJ5IiBWYWx1ZVR5cGU9Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL3dzcy8yMDA0LzAxL29hc2lzLTIwMDQwMS13c3MteDUwOS10b2tlbi1wcm9maWxlLTEuMCNYNTA5djMiIHdzdTpJZD0iQmluYXJ5U2VjdXJpdHlUb2tlbi0wLWNjNDFjODA3NmU1NDZiMTI5ZDY2MTk2Yzg2YzJiNGIzIiB4bWxuczp3c3NlPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy93c3MvMjAwNC8wMS9vYXNpcy0yMDA0MDEtd3NzLXdzc2VjdXJpdHktc2VjZXh0LTEuMC54c2QiPk1JSURPekNDQWlPZ0F3SUJBZ0lJRE9iM1Bld09Oejh3RFFZSktvWklodmNOQVFFTUJRQXdMakVzTUNvR0ExVUVBeE1qY205dmRDNWhjR2x0TFdGMWRHOTBaWE4wTG14MmJpNWljbTloWkdOdmJTNXVaWFF3SUJjTk1Ua3dNakE0TWpFME9UQTRXaGdQTWpBMk9UQXhNall5TVRRNU1EaGFNQ2t4SnpBbEJnTlZCQU1USG1Gd2FXMHRZWFYwYjNSbGMzUXViSFp1TG1KeWIyRmtZMjl0TG01bGREQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQVBVSUI1VWNvbzlZSVZCVExOaTVZL01Gd29BWWc0cDZsUS9ZcDdhL0UzUVZyQkhVd2dtT1FOZDl0bmhCMEFHVk5wdnR6R0ZNQTlFN0h1MEM3UTVEcDBMcXRkaDJxeXZObEhaQWYrd295WUdlM1dCVnZjWU1qRDBQYk5idWsrZnpiNHU4aVRLZTVzbDAwWGM5eHZVOWRXYTFxS1gzZ2t0dWg4T3JUekIyTWh1WS9WRUVhRmw3VnRma0gveDNjSHMvY25vWHN6dWpvR1Z2TnRjend4K3ZtcDk1enc5d3l4M2tEcy9tTWFPUllFL29QT3ZoZDFhSDhSWk5jREI3cFZWeVNpaFRSUEdPNXBQb0pEV0o3UjZoUUw5OS9HUDIvV3c0WDJmU2o3KzVtWEcyRGpEZlc1TExPU0N2RjBrTnFwNVh5UU1rUWVKRGRkZGpYbXNOZnZyU0p1TUNBd0VBQWFOZ01GNHdEQVlEVlIwVEFRSC9CQUl3QURBT0JnTlZIUThCQWY4RUJBTUNCZUF3SFFZRFZSME9CQllFRkVVR0FHVXc5eFlidDVQZ3cvNUJCRVYwVXRlc01COEdBMVVkSXdRWU1CYUFGQ0lUNkplQVVZbHFsbDBwcTNaaWptSXJaY1RXTUEwR0NTcUdTSWIzRFFFQkRBVUFBNElCQVFCbHVFMG0vaGplb0Z1Q1RQSEZvV3ZTS2M5OHN6SVZGOVMxZlVLWjlZWnV4TEpnN2dPOGJoVjJDc1E1U0pJS1lHUHdmbzJJQTZnU3FuMlV3eHBBd0dKVnljcXZFN01PZEkrU01Jem5BZGtFMWZ6Z1FuWkV5Y3N6eExLMG50SnJzcmtKWDQzc3JGeXdKR2o5cFZRdHJ4MndCWXFMY2dHWXNidS8vWkd1aDkxdVUrN1p4OVNibU9TQnJ6ZjhROENhQVl6cmhRTzlFYmNaWTVsT3B0dDZKMy9PMmdBR3ZJeVh0MkF3ZkhqSGZScWkvODRPVjV6ejNINXN6K09PTlQrdkVtMy9ldkNyMEZGZmZxd3QzbmlvTDI4UkhTYVdoZVI1eXR1enp2d0kvMEZKR3dEN3dEUXFjSituWTlwV0lPblZVeTh2MzVyNGgwRG9jTkVsdGlEUzVXajQ8L3dzc2U6QmluYXJ5U2VjdXJpdHlUb2tlbj48ZHM6U2lnbmF0dXJlIHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj48ZHM6U2lnbmVkSW5mbz48ZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjxkczpTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjcnNhLXNoYTEiLz48ZHM6UmVmZXJlbmNlIFVSST0iI0JvZHktMS0wYjA1OWZmODg2YzhiNjhkNjdmMGQ2OTVlNTZkMGVhMSI+PGRzOlRyYW5zZm9ybXM+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3NoYTEiLz48ZHM6RGlnZXN0VmFsdWU+SzBDVnZyQ1RLaDcxcmdpL1hpYzJuMHkxUk1VPTwvZHM6RGlnZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PGRzOlJlZmVyZW5jZSBVUkk9IiNUaW1lc3RhbXAtMi1hZTA4MTc1YzEwN2UzODBjOWU1NGRhZmIwMmVmYzY5ZCI+PGRzOlRyYW5zZm9ybXM+PGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3NoYTEiLz48ZHM6RGlnZXN0VmFsdWU+T3hMUkZsTjltRUE1VGx2bHVaZWZ2OVlSek00PTwvZHM6RGlnZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1ZT5GWEF5aEt2MjVZN3laajNXZVc2bDYwRnhacCtFajh5MTU3NktkSldBS3g3Zm5PQUc3d1pvRUltL1pUVFVaRlNYckFBdW9oMGFjdDZZbkxZc0xXOWNLZDVZajNnblY0SENHRmprNUtXNVBMTFhJWGcrcXZ0cmd2YnZpOTU1UURWUG5mYmswakhSMTlyVFZURnVYdGhyRGV6c0YzTXRHTWpGeGMvU0R4T1ZDNDU5UExzQlVpQjRPUFRqdUIyN0ZacGRwNzRJc0hKOUl6anllSUtvdHJYRkN6RWt5TmZ0L3U3dzJSeEl6ODRpemRvUnBidjN6cEtVdHBxMTBpTDRvYjRKL29zQ0IwLzd0R2k3RktCZ0xzb3ZRVEFCZUtpUzRkUTZVRDMwVmxqZFVqcmVYcS9ROFdVWEt0MW5QdGNudWhuQVhPRnFZbjFVMXNjQStaUjUreEtUNGc9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PHdzc2U6U2VjdXJpdHlUb2tlblJlZmVyZW5jZSB4bWxuczp3c3NlPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy93c3MvMjAwNC8wMS9vYXNpcy0yMDA0MDEtd3NzLXdzc2VjdXJpdHktc2VjZXh0LTEuMC54c2QiPjx3c3NlOlJlZmVyZW5jZSBVUkk9IiNCaW5hcnlTZWN1cml0eVRva2VuLTAtY2M0MWM4MDc2ZTU0NmIxMjlkNjYxOTZjODZjMmI0YjMiIFZhbHVlVHlwZT0iaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvd3NzLzIwMDQvMDEvb2FzaXMtMjAwNDAxLXdzcy14NTA5LXRva2VuLXByb2ZpbGUtMS4wI1g1MDl2MyIvPjwvd3NzZTpTZWN1cml0eVRva2VuUmVmZXJlbmNlPjwvZHM6S2V5SW5mbz48L2RzOlNpZ25hdHVyZT48L3dzc2U6U2VjdXJpdHk+PC9zb2FwZW52OkhlYWRlcj4NCiAgIDxzb2FwZW52OkJvZHkgd3N1OklkPSJCb2R5LTEtMGIwNTlmZjg4NmM4YjY4ZDY3ZjBkNjk1ZTU2ZDBlYTEiIHhtbG5zOndzdT0iaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvd3NzLzIwMDQvMDEvb2FzaXMtMjAwNDAxLXdzcy13c3NlY3VyaXR5LXV0aWxpdHktMS4wLnhzZCI+DQogICAgICA8d3M6bGlzdFByb2R1Y3RzPg0KICAgICAgICAgPHdzOmRlbGF5PjA8L3dzOmRlbGF5Pg0KICAgICAgPC93czpsaXN0UHJvZHVjdHM+DQogICA8L3NvYXBlbnY6Qm9keT4NCjwvc29hcGVudjpFbnZlbG9wZT4=&quot;/&gt;
+    &lt;L7p:ContentType stringValue=&quot;text/xml; charset=utf-8&quot;/&gt;
+    &lt;L7p:DataType variableDataType=&quot;message&quot;/&gt;
+    &lt;L7p:VariableToSet stringValue=&quot;testdata&quot;/&gt;
+&lt;/L7p:SetVariable&gt;
+&lt;L7p:HttpRoutingAssertion&gt;
+    &lt;L7p:ProtectedServiceUrl stringValue=&quot;http://localhost:8080/soap_signature_verification&quot;/&gt;
+    &lt;L7p:ProxyPassword stringValueNull=&quot;null&quot;/&gt;
+    &lt;L7p:ProxyUsername stringValueNull=&quot;null&quot;/&gt;
+    &lt;L7p:RequestHeaderRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+        &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+        &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;&gt;
+            &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                &lt;L7p:Name stringValue=&quot;Cookie&quot;/&gt;
+            &lt;/L7p:item&gt;
+            &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                &lt;L7p:Name stringValue=&quot;SOAPAction&quot;/&gt;
+            &lt;/L7p:item&gt;
+        &lt;/L7p:Rules&gt;
+    &lt;/L7p:RequestHeaderRules&gt;
+    &lt;L7p:RequestMsgSrc stringValue=&quot;testdata&quot;/&gt;
+    &lt;L7p:RequestParamRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+        &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+        &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;/&gt;
+    &lt;/L7p:RequestParamRules&gt;
+    &lt;L7p:ResponseHeaderRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+        &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+        &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;&gt;
+            &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                &lt;L7p:Name stringValue=&quot;Set-Cookie&quot;/&gt;
+            &lt;/L7p:item&gt;
+        &lt;/L7p:Rules&gt;
+    &lt;/L7p:ResponseHeaderRules&gt;
+    &lt;L7p:SamlAssertionVersion intValue=&quot;2&quot;/&gt;
+&lt;/L7p:HttpRoutingAssertion&gt;
+&lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                        </l7:ResourceSet>
+                        <l7:ResourceSet rootUrl="http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx?wsdl" tag="wsdl">
+                            <l7:Resource sourceUrl="http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx?wsdl" type="wsdl">&lt;wsdl:definitions targetNamespace=&quot;http://warehouse.acme.com/ws&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:s=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:tm=&quot;http://microsoft.com/wsdl/mime/textMatching/&quot; xmlns:tns=&quot;http://warehouse.acme.com/ws&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;&gt;
+&lt;wsdl:types&gt;
+&lt;s:schema elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://warehouse.acme.com/ws&quot;&gt;
+&lt;s:element name=&quot;listProducts&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;listProductsResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;listProductsResult&quot; type=&quot;tns:ArrayOfProductListHeader&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:complexType name=&quot;ArrayOfProductListHeader&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;ProductListHeader&quot; nillable=&quot;true&quot; type=&quot;tns:ProductListHeader&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;s:complexType name=&quot;ProductListHeader&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;productName&quot; type=&quot;s:string&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productId&quot; type=&quot;s:long&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;s:element name=&quot;getProductDetails&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;getProductDetailsResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;getProductDetailsResult&quot; type=&quot;tns:ProductDetails&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:complexType name=&quot;ProductDetails&quot;&gt;
+&lt;s:complexContent mixed=&quot;false&quot;&gt;
+  &lt;s:extension base=&quot;tns:ProductListHeader&quot;&gt;
+    &lt;s:sequence&gt;
+      &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;description&quot; type=&quot;s:string&quot;/&gt;
+      &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;price&quot; type=&quot;s:float&quot;/&gt;
+      &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;inStock&quot; type=&quot;s:boolean&quot;/&gt;
+    &lt;/s:sequence&gt;
+  &lt;/s:extension&gt;
+&lt;/s:complexContent&gt;
+&lt;/s:complexType&gt;
+&lt;s:element name=&quot;placeOrder&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;amount&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;price&quot; type=&quot;s:float&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;accountid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;placeOrderResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;placeOrderResult&quot; type=&quot;s:long&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;currentOrders&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;accountid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;currentOrdersResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;currentOrdersResult&quot; type=&quot;tns:ArrayOfOrder&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:complexType name=&quot;ArrayOfOrder&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;Order&quot; nillable=&quot;true&quot; type=&quot;tns:Order&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;s:complexType name=&quot;Order&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;date&quot; type=&quot;s:dateTime&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;accountId&quot; type=&quot;s:long&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productId&quot; type=&quot;s:long&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;amount&quot; type=&quot;s:long&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;price&quot; type=&quot;s:float&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;confirmationId&quot; type=&quot;s:long&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:schema&gt;
+&lt;/wsdl:types&gt;
+&lt;wsdl:message name=&quot;listProductsSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:listProducts&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;listProductsSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:listProductsResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;getProductDetailsSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:getProductDetails&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;getProductDetailsSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:getProductDetailsResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;placeOrderSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:placeOrder&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;placeOrderSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:placeOrderResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;currentOrdersSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:currentOrders&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;currentOrdersSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:currentOrdersResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:portType name=&quot;WarehouseSoap&quot;&gt;
+&lt;wsdl:operation name=&quot;listProducts&quot;&gt;
+&lt;wsdl:input message=&quot;tns:listProductsSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:listProductsSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;getProductDetails&quot;&gt;
+&lt;wsdl:input message=&quot;tns:getProductDetailsSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:getProductDetailsSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;placeOrder&quot;&gt;
+&lt;wsdl:input message=&quot;tns:placeOrderSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:placeOrderSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;currentOrders&quot;&gt;
+&lt;wsdl:input message=&quot;tns:currentOrdersSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:currentOrdersSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:portType&gt;
+&lt;wsdl:binding name=&quot;WarehouseSoap&quot; type=&quot;tns:WarehouseSoap&quot;&gt;
+&lt;soap:binding transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+&lt;wsdl:operation name=&quot;listProducts&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/listProducts&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;getProductDetails&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/getProductDetails&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;placeOrder&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/placeOrder&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;currentOrders&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/currentOrders&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:binding&gt;
+&lt;wsdl:binding name=&quot;WarehouseSoap12&quot; type=&quot;tns:WarehouseSoap&quot;&gt;
+&lt;soap12:binding transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+&lt;wsdl:operation name=&quot;listProducts&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/listProducts&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;getProductDetails&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/getProductDetails&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;placeOrder&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/placeOrder&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;currentOrders&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/currentOrders&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:binding&gt;
+&lt;wsdl:service name=&quot;Warehouse&quot;&gt;
+&lt;wsdl:port binding=&quot;tns:WarehouseSoap&quot; name=&quot;WarehouseSoap&quot;&gt;
+&lt;soap:address location=&quot;http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx&quot;/&gt;
+&lt;/wsdl:port&gt;
+&lt;wsdl:port binding=&quot;tns:WarehouseSoap12&quot; name=&quot;WarehouseSoap12&quot;&gt;
+&lt;soap12:address location=&quot;http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx&quot;/&gt;
+&lt;/wsdl:port&gt;
+&lt;/wsdl:service&gt;
+&lt;/wsdl:definitions&gt;</l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>Warehouse</l7:Name>
+            <l7:Id>d596e30a71a76eecfef48c68c40ae75c</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2022-02-16T17:41:54.808-08:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="d596e30a71a76eecfef48c68c40ae75c" version="2">
+                    <l7:ServiceDetail folderId="d596e30a71a76eecfef48c68c40ae6ac" id="d596e30a71a76eecfef48c68c40ae75c" version="2">
+                        <l7:Name>Warehouse</l7:Name>
+                        <l7:Enabled>true</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>/soap_signature_verification</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>POST</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                            <l7:SoapMapping>
+                                <l7:Lax>true</l7:Lax>
+                            </l7:SoapMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="hasRouting">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>3</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="soapVersion">
+                                <l7:StringValue>unspecified</l7:StringValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="2">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+&lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+&lt;wsse:SecurityToken xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;
+    &lt;wsse:TokenType&gt;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3&lt;/wsse:TokenType&gt;
+    &lt;L7p:Properties/&gt;
+&lt;/wsse:SecurityToken&gt;
+&lt;L7p:RequireWssSignedElement&gt;
+    &lt;L7p:AcceptedDigestAlgorithms stringArrayValue=&quot;included&quot;&gt;
+        &lt;L7p:item stringValue=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;
+        &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot;/&gt;
+        &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmldsig-more#sha384&quot;/&gt;
+        &lt;L7p:item stringValue=&quot;http://www.w3.org/2001/04/xmlenc#sha512&quot;/&gt;
+    &lt;/L7p:AcceptedDigestAlgorithms&gt;
+    &lt;L7p:XpathExpression xpathExpressionValue=&quot;included&quot;&gt;
+        &lt;L7p:Expression stringValue=&quot;/s:Envelope/s:Body&quot;/&gt;
+        &lt;L7p:Namespaces mapValue=&quot;included&quot;&gt;
+            &lt;L7p:entry&gt;
+                &lt;L7p:key stringValue=&quot;s&quot;/&gt;
+                &lt;L7p:value stringValue=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;
+            &lt;/L7p:entry&gt;
+        &lt;/L7p:Namespaces&gt;
+    &lt;/L7p:XpathExpression&gt;
+&lt;/L7p:RequireWssSignedElement&gt;
+&lt;L7p:EchoRoutingAssertion/&gt;
+&lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                        </l7:ResourceSet>
+                        <l7:ResourceSet rootUrl="http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx?wsdl" tag="wsdl">
+                            <l7:Resource sourceUrl="http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx?wsdl" type="wsdl">&lt;wsdl:definitions targetNamespace=&quot;http://warehouse.acme.com/ws&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:s=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:tm=&quot;http://microsoft.com/wsdl/mime/textMatching/&quot; xmlns:tns=&quot;http://warehouse.acme.com/ws&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;&gt;
+&lt;wsdl:types&gt;
+&lt;s:schema elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://warehouse.acme.com/ws&quot;&gt;
+&lt;s:element name=&quot;listProducts&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;listProductsResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;listProductsResult&quot; type=&quot;tns:ArrayOfProductListHeader&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:complexType name=&quot;ArrayOfProductListHeader&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;ProductListHeader&quot; nillable=&quot;true&quot; type=&quot;tns:ProductListHeader&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;s:complexType name=&quot;ProductListHeader&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;productName&quot; type=&quot;s:string&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productId&quot; type=&quot;s:long&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;s:element name=&quot;getProductDetails&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;getProductDetailsResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;getProductDetailsResult&quot; type=&quot;tns:ProductDetails&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:complexType name=&quot;ProductDetails&quot;&gt;
+&lt;s:complexContent mixed=&quot;false&quot;&gt;
+  &lt;s:extension base=&quot;tns:ProductListHeader&quot;&gt;
+    &lt;s:sequence&gt;
+      &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;description&quot; type=&quot;s:string&quot;/&gt;
+      &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;price&quot; type=&quot;s:float&quot;/&gt;
+      &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;inStock&quot; type=&quot;s:boolean&quot;/&gt;
+    &lt;/s:sequence&gt;
+  &lt;/s:extension&gt;
+&lt;/s:complexContent&gt;
+&lt;/s:complexType&gt;
+&lt;s:element name=&quot;placeOrder&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;amount&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;price&quot; type=&quot;s:float&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;accountid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;placeOrderResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;placeOrderResult&quot; type=&quot;s:long&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;currentOrders&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;accountid&quot; type=&quot;s:long&quot;/&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;delay&quot; type=&quot;s:int&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:element name=&quot;currentOrdersResponse&quot;&gt;
+&lt;s:complexType&gt;
+  &lt;s:sequence&gt;
+    &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;0&quot; name=&quot;currentOrdersResult&quot; type=&quot;tns:ArrayOfOrder&quot;/&gt;
+  &lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:element&gt;
+&lt;s:complexType name=&quot;ArrayOfOrder&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;Order&quot; nillable=&quot;true&quot; type=&quot;tns:Order&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;s:complexType name=&quot;Order&quot;&gt;
+&lt;s:sequence&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;date&quot; type=&quot;s:dateTime&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;accountId&quot; type=&quot;s:long&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;productId&quot; type=&quot;s:long&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;amount&quot; type=&quot;s:long&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;price&quot; type=&quot;s:float&quot;/&gt;
+  &lt;s:element maxOccurs=&quot;1&quot; minOccurs=&quot;1&quot; name=&quot;confirmationId&quot; type=&quot;s:long&quot;/&gt;
+&lt;/s:sequence&gt;
+&lt;/s:complexType&gt;
+&lt;/s:schema&gt;
+&lt;/wsdl:types&gt;
+&lt;wsdl:message name=&quot;listProductsSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:listProducts&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;listProductsSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:listProductsResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;getProductDetailsSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:getProductDetails&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;getProductDetailsSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:getProductDetailsResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;placeOrderSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:placeOrder&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;placeOrderSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:placeOrderResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;currentOrdersSoapIn&quot;&gt;
+&lt;wsdl:part element=&quot;tns:currentOrders&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:message name=&quot;currentOrdersSoapOut&quot;&gt;
+&lt;wsdl:part element=&quot;tns:currentOrdersResponse&quot; name=&quot;parameters&quot;/&gt;
+&lt;/wsdl:message&gt;
+&lt;wsdl:portType name=&quot;WarehouseSoap&quot;&gt;
+&lt;wsdl:operation name=&quot;listProducts&quot;&gt;
+&lt;wsdl:input message=&quot;tns:listProductsSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:listProductsSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;getProductDetails&quot;&gt;
+&lt;wsdl:input message=&quot;tns:getProductDetailsSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:getProductDetailsSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;placeOrder&quot;&gt;
+&lt;wsdl:input message=&quot;tns:placeOrderSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:placeOrderSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;currentOrders&quot;&gt;
+&lt;wsdl:input message=&quot;tns:currentOrdersSoapIn&quot;/&gt;
+&lt;wsdl:output message=&quot;tns:currentOrdersSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:portType&gt;
+&lt;wsdl:binding name=&quot;WarehouseSoap&quot; type=&quot;tns:WarehouseSoap&quot;&gt;
+&lt;soap:binding transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+&lt;wsdl:operation name=&quot;listProducts&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/listProducts&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;getProductDetails&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/getProductDetails&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;placeOrder&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/placeOrder&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;currentOrders&quot;&gt;
+&lt;soap:operation soapAction=&quot;http://warehouse.acme.com/ws/currentOrders&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:binding&gt;
+&lt;wsdl:binding name=&quot;WarehouseSoap12&quot; type=&quot;tns:WarehouseSoap&quot;&gt;
+&lt;soap12:binding transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;
+&lt;wsdl:operation name=&quot;listProducts&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/listProducts&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;getProductDetails&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/getProductDetails&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;placeOrder&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/placeOrder&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;wsdl:operation name=&quot;currentOrders&quot;&gt;
+&lt;soap12:operation soapAction=&quot;http://warehouse.acme.com/ws/currentOrders&quot; style=&quot;document&quot;/&gt;
+&lt;wsdl:input&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:input&gt;
+&lt;wsdl:output&gt;
+&lt;soap12:body use=&quot;literal&quot;/&gt;
+&lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:binding&gt;
+&lt;wsdl:service name=&quot;Warehouse&quot;&gt;
+&lt;wsdl:port binding=&quot;tns:WarehouseSoap&quot; name=&quot;WarehouseSoap&quot;&gt;
+&lt;soap:address location=&quot;http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx&quot;/&gt;
+&lt;/wsdl:port&gt;
+&lt;wsdl:port binding=&quot;tns:WarehouseSoap12&quot; name=&quot;WarehouseSoap12&quot;&gt;
+&lt;soap12:address location=&quot;http://apim-hugh-new.lvn.broadcom.net/ACMEWarehouseWS/Service1.asmx&quot;/&gt;
+&lt;/wsdl:port&gt;
+&lt;/wsdl:service&gt;
+&lt;/wsdl:definitions&gt;</l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+    </l7:References>
+    <l7:Mappings>
+        <l7:Mapping action="NewOrExisting" srcId="d596e30a71a76eecfef48c68c40ae6ac" srcUri="http://apim-autotest.lvn.broadcom.net:8080/restman/1.0/folders/d596e30a71a76eecfef48c68c40ae6ac" type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="d596e30a71a76eecfef48c68c40ae6f2" srcUri="http://apim-autotest.lvn.broadcom.net:8080/restman/1.0/services/d596e30a71a76eecfef48c68c40ae6f2" type="SERVICE"/>
+        <l7:Mapping action="NewOrExisting" srcId="d596e30a71a76eecfef48c68c40ae75c" srcUri="http://apim-autotest.lvn.broadcom.net:8080/restman/1.0/services/d596e30a71a76eecfef48c68c40ae75c" type="SERVICE"/>
+    </l7:Mappings>
+</l7:Bundle>

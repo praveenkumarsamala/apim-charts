@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+            <l7:References>
+                <l7:Item>
+                    <l7:Name>Internal Identity Provider</l7:Name>
+                    <l7:Id>0000000000000000fffffffffffffffe</l7:Id>
+                    <l7:Type>ID_PROVIDER_CONFIG</l7:Type>
+                    <l7:TimeStamp>2017-03-29T14:06:12.268-07:00</l7:TimeStamp>
+                    <l7:Resource>
+                        <l7:IdentityProvider id="0000000000000000fffffffffffffffe" version="0">
+                            <l7:Name>Internal Identity Provider</l7:Name>
+                            <l7:IdentityProviderType>Internal</l7:IdentityProviderType>
+                        </l7:IdentityProvider>
+                    </l7:Resource>
+                </l7:Item>
+                <l7:Item>
+                    <l7:Name>Gateway REST Management Service</l7:Name>
+                    <l7:Id>180dd7207e502a6d4577cb5b8e57b782</l7:Id>
+                    <l7:Type>SERVICE</l7:Type>
+                    <l7:TimeStamp>2017-03-29T14:06:12.272-07:00</l7:TimeStamp>
+                    <l7:Resource>
+                        <l7:Service id="180dd7207e502a6d4577cb5b8e57b782" version="2">
+                            <l7:ServiceDetail folderId="0000000000000000ffffffffffffec76" id="180dd7207e502a6d4577cb5b8e57b782" version="2">
+                                <l7:Name>Gateway REST Management Service</l7:Name>
+                                <l7:Enabled>true</l7:Enabled>
+                                <l7:ServiceMappings>
+                                    <l7:HttpMapping>
+                                        <l7:UrlPattern>/restman/*</l7:UrlPattern>
+                                        <l7:Verbs>
+                                            <l7:Verb>GET</l7:Verb>
+                                            <l7:Verb>POST</l7:Verb>
+                                            <l7:Verb>PUT</l7:Verb>
+                                            <l7:Verb>DELETE</l7:Verb>
+                                        </l7:Verbs>
+                                    </l7:HttpMapping>
+                                </l7:ServiceMappings>
+                                <l7:Properties>
+                                    <l7:Property key="internal">
+                                        <l7:BooleanValue>true</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="policyRevision">
+                                        <l7:LongValue>2</l7:LongValue>
+                                    </l7:Property>
+                                    <l7:Property key="soap">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="tracingEnabled">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="wssProcessingEnabled">
+                                        <l7:BooleanValue>true</l7:BooleanValue>
+                                    </l7:Property>
+                                </l7:Properties>
+                            </l7:ServiceDetail>
+                            <l7:Resources>
+                                <l7:ResourceSet tag="policy">
+                                    <l7:Resource type="policy" version="1">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+    &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+        &lt;wsp:OneOrMore wsp:Usage=&quot;Required&quot;&gt;
+            &lt;L7p:SslAssertion&gt;
+                &lt;L7p:RequireClientAuthentication booleanValue=&quot;true&quot;/&gt;
+            &lt;/L7p:SslAssertion&gt;
+            &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                &lt;L7p:SslAssertion&gt;
+                    &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                &lt;/L7p:SslAssertion&gt;
+                &lt;L7p:HttpBasic/&gt;
+            &lt;/wsp:All&gt;
+        &lt;/wsp:OneOrMore&gt;
+        &lt;L7p:Authentication&gt;
+            &lt;L7p:IdentityProviderOid goidValue=&quot;0000000000000000fffffffffffffffe&quot;/&gt;
+        &lt;/L7p:Authentication&gt;
+        &lt;wsp:OneOrMore wsp:Usage=&quot;Required&quot;&gt;
+            &lt;L7p:CommentAssertion&gt;
+                &lt;L7p:Comment stringValue=&quot;Check the request message size. If the maximum message size needs to be increased change the 'restman.request.message.maxSize' cluster property&quot;/&gt;
+            &lt;/L7p:CommentAssertion&gt;
+            &lt;L7p:RequestSizeLimit&gt;
+                &lt;L7p:Limit stringValue=&quot;${gateway.restman.request.message.maxSize}&quot;/&gt;
+            &lt;/L7p:RequestSizeLimit&gt;
+            &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                &lt;L7p:CustomizeErrorResponse&gt;
+                    &lt;L7p:Content stringValueReference=&quot;inline&quot;&gt;&lt;![CDATA[&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;l7:Error xmlns:l7=&quot;http://ns.l7tech.com/2010/04/gateway-management&quot;&gt;
+    &lt;l7:Type&gt;InvalidRequest&lt;/l7:Type&gt;
+    &lt;l7:Detail&gt;the specified maximum data size limit would be exceeded&lt;/l7:Detail&gt;
+&lt;/l7:Error&gt;]]&gt;&lt;/L7p:Content&gt;
+                    &lt;L7p:ContentType stringValue=&quot;application/xml; charset=UTF-8&quot;/&gt;
+                    &lt;L7p:HttpStatus stringValue=&quot;400&quot;/&gt;
+                &lt;/L7p:CustomizeErrorResponse&gt;
+                &lt;L7p:FalseAssertion/&gt;
+            &lt;/wsp:All&gt;
+        &lt;/wsp:OneOrMore&gt;
+        &lt;L7p:RESTGatewayManagement/&gt;
+    &lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                                </l7:ResourceSet>
+                            </l7:Resources>
+                        </l7:Service>
+                    </l7:Resource>
+                </l7:Item>
+            </l7:References>
+            <l7:Mappings>
+                <l7:Mapping action="NewOrExisting" srcId="0000000000000000fffffffffffffffe" srcUri="http://192.168.99.102:8080/restman/1.0/identityProviders/0000000000000000fffffffffffffffe" type="ID_PROVIDER_CONFIG">
+                    <l7:Properties>
+                        <l7:Property key="FailOnNew">
+                            <l7:BooleanValue>true</l7:BooleanValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:Mapping>
+                <l7:Mapping action="Ignore" type="CLUSTER_PROPERTY">
+                    <l7:Properties>
+                        <l7:Property key="MapBy">
+                            <l7:StringValue>name</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="MapTo">
+                            <l7:StringValue>restman.request.message.maxSize</l7:StringValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:Mapping>
+                <l7:Mapping action="NewOrExisting" srcId="0000000000000000ffffffffffffec76" srcUri="http://192.168.99.102:8080/restman/1.0/folders/0000000000000000ffffffffffffec76" type="FOLDER">
+                    <l7:Properties>
+                        <l7:Property key="FailOnNew">
+                            <l7:BooleanValue>true</l7:BooleanValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:Mapping>
+                <l7:Mapping action="NewOrExisting" srcId="180dd7207e502a6d4577cb5b8e57b782" srcUri="http://192.168.99.102:8080/restman/1.0/services/180dd7207e502a6d4577cb5b8e57b782" type="SERVICE">
+                    <l7:Properties>
+                        <l7:Property key="MapBy">
+                            <l7:StringValue>name</l7:StringValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:Mapping>
+            </l7:Mappings>
+        </l7:Bundle>

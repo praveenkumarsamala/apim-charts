@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:References>
+        <l7:Item>
+            <l7:Name>apim-hugh-new ws</l7:Name>
+            <l7:Id>d596e30a71a76eecfef48c68c40906ba</l7:Id>
+            <l7:Type>GENERIC</l7:Type>
+            <l7:TimeStamp>2022-02-10T17:48:35.138-08:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:GenericEntity id="d596e30a71a76eecfef48c68c40906ba" version="2">
+                    <l7:Name>apim-hugh-new ws</l7:Name>
+                    <l7:Description></l7:Description>
+                    <l7:EntityClassName>com.l7tech.external.assertions.websocket.WebSocketConnectionEntity</l7:EntityClassName>
+                    <l7:Enabled>true</l7:Enabled>
+                    <l7:ValueXml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;java version=&quot;11.0.13&quot; class=&quot;java.beans.XMLDecoder&quot;&gt;
+ &lt;object class=&quot;com.l7tech.external.assertions.websocket.WebSocketConnectionEntity&quot;&gt;
+  &lt;void property=&quot;connectionPolicyGOID&quot;&gt;
+   &lt;object class=&quot;com.l7tech.objectmodel.Goid&quot; id=&quot;Goid0&quot;&gt;
+    &lt;string&gt;0000000000000000ffffffffffffffff&lt;/string&gt;
+   &lt;/object&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;description&quot;&gt;
+   &lt;string&gt;&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;id&quot;&gt;
+   &lt;string&gt;d596e30a71a76eecfef48c68c40906ba&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundClientAuth&quot;&gt;
+   &lt;object class=&quot;java.lang.Enum&quot; method=&quot;valueOf&quot;&gt;
+    &lt;class&gt;com.l7tech.external.assertions.websocket.WebSocketConnectionEntity$ClientAuthType&lt;/class&gt;
+    &lt;string&gt;NONE&lt;/string&gt;
+   &lt;/object&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundListenPort&quot;&gt;
+   &lt;int&gt;8444&lt;/int&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundPolicyOID&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundPrivateKeyId&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;name&quot;&gt;
+   &lt;string&gt;apim-hugh-new ws&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundConnectionPolicyId&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundPolicyOID&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundPrivateKeyId&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundUrl&quot;&gt;
+   &lt;string&gt;ws://apim-hugh-new.lvn.broadcom.net:8091&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;valueXml&quot;&gt;
+   &lt;string&gt;&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;version&quot;&gt;
+   &lt;int&gt;1&lt;/int&gt;
+  &lt;/void&gt;
+ &lt;/object&gt;
+&lt;/java&gt;
+</l7:ValueXml>
+                        </l7:GenericEntity>
+                    </l7:Resource>
+                </l7:Item>
+                <l7:Item>
+                    <l7:Name>apim-hugh-new wss</l7:Name>
+                    <l7:Id>d596e30a71a76eecfef48c68c4094c1d</l7:Id>
+                    <l7:Type>GENERIC</l7:Type>
+                    <l7:TimeStamp>2022-02-10T17:48:35.144-08:00</l7:TimeStamp>
+                    <l7:Resource>
+                        <l7:GenericEntity id="d596e30a71a76eecfef48c68c4094c1d" version="3">
+                            <l7:Name>apim-hugh-new wss</l7:Name>
+                            <l7:Description></l7:Description>
+                            <l7:EntityClassName>com.l7tech.external.assertions.websocket.WebSocketConnectionEntity</l7:EntityClassName>
+                            <l7:Enabled>true</l7:Enabled>
+                            <l7:ValueXml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;java version=&quot;11.0.13&quot; class=&quot;java.beans.XMLDecoder&quot;&gt;
+ &lt;object class=&quot;com.l7tech.external.assertions.websocket.WebSocketConnectionEntity&quot; id=&quot;WebSocketConnectionEntity0&quot;&gt;
+  &lt;void property=&quot;connectionPolicyGOID&quot;&gt;
+   &lt;object class=&quot;com.l7tech.objectmodel.Goid&quot; id=&quot;Goid0&quot;&gt;
+    &lt;string&gt;0000000000000000ffffffffffffffff&lt;/string&gt;
+   &lt;/object&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;description&quot;&gt;
+   &lt;string&gt;&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;id&quot;&gt;
+   &lt;string&gt;d596e30a71a76eecfef48c68c4094c1d&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundClientAuth&quot;&gt;
+   &lt;object class=&quot;java.lang.Enum&quot; method=&quot;valueOf&quot;&gt;
+    &lt;class&gt;com.l7tech.external.assertions.websocket.WebSocketConnectionEntity$ClientAuthType&lt;/class&gt;
+    &lt;string&gt;NONE&lt;/string&gt;
+   &lt;/object&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundListenPort&quot;&gt;
+   &lt;int&gt;8445&lt;/int&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundPolicyOID&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;inboundPrivateKeyId&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void id=&quot;Boolean0&quot; method=&quot;isEnabled&quot;/&gt;
+  &lt;void property=&quot;inboundSsl&quot;&gt;
+   &lt;object idref=&quot;Boolean0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;name&quot;&gt;
+   &lt;string&gt;apim-hugh-new wss&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundConnectionPolicyId&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundPolicyOID&quot;&gt;
+   &lt;object idref=&quot;Goid0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundPrivateKeyId&quot;&gt;
+   &lt;object class=&quot;com.l7tech.objectmodel.Goid&quot;&gt;
+    &lt;string&gt;0000000000000000ffffffffffffffff&lt;/string&gt;
+   &lt;/object&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundSsl&quot;&gt;
+   &lt;object idref=&quot;Boolean0&quot;/&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;outboundUrl&quot;&gt;
+   &lt;string&gt;wss://apim-hugh-new.lvn.broadcom.net:8092&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;valueXml&quot;&gt;
+   &lt;string&gt;&lt;/string&gt;
+  &lt;/void&gt;
+  &lt;void property=&quot;version&quot;&gt;
+   &lt;int&gt;2&lt;/int&gt;
+  &lt;/void&gt;
+ &lt;/object&gt;
+&lt;/java&gt;
+</l7:ValueXml>
+                </l7:GenericEntity>
+            </l7:Resource>
+        </l7:Item>
+    </l7:References>
+    <l7:Mappings>
+        <l7:Mapping action="NewOrExisting" srcId="d596e30a71a76eecfef48c68c40906ba" srcUri="http://apim-autotest.lvn.broadcom.net:8080/restman/1.0/genericEntities/d596e30a71a76eecfef48c68c40906ba" type="GENERIC"/>
+        <l7:Mapping action="NewOrExisting" srcId="d596e30a71a76eecfef48c68c4094c1d" srcUri="http://apim-autotest.lvn.broadcom.net:8080/restman/1.0/genericEntities/d596e30a71a76eecfef48c68c4094c1d" type="GENERIC"/>
+    </l7:Mappings>
+</l7:Bundle>

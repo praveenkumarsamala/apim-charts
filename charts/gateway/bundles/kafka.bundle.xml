@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:References>
+        <l7:Item>
+            <l7:Name>kafka-client</l7:Name>
+            <l7:Id>00000000000000000000000000000002:kafka-client</l7:Id>
+            <l7:Type>SSG_KEY_ENTRY</l7:Type>
+            <l7:TimeStamp>2019-07-17T08:57:16.750Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:PrivateKey alias="kafka-client" keystoreId="00000000000000000000000000000002" id="00000000000000000000000000000002:kafka-client">
+                    <l7:CertificateChain>
+                        <l7:CertificateData>
+                            <l7:IssuerName>CN%3Dkafka-client-ca%2COU%3DAPIM%2CO%3DBroadcom%2CL%3DLas+Vegas%2CST%3DNevada%2CC%3DUS</l7:IssuerName>
+                            <l7:SerialNumber>15186692284379534834</l7:SerialNumber>
+                            <l7:SubjectName>CN%3Dkafka-client%2COU%3DAPIM%2CO%3DBroadcom%2CL%3DLas+Vegas%2CST%3DNevada%2CC%3DUS</l7:SubjectName>
+                            <l7:Encoded>MIIDVTCCAj0CCQDSwfgri5uV8jANBgkqhkiG9w0BAQUFADBuMQswCQYDVQQGEwJVUzEPMA0GA1UECAwGTmV2YWRhMRIwEAYDVQQHDAlMYXMgVmVnYXMxETAPBgNVBAoMCEJyb2FkY29tMQ0wCwYDVQQLDARBUElNMRgwFgYDVQQDDA9rYWZrYS1jbGllbnQtY2EwHhcNMTkwNjE3MDgzMzUwWhcNMjkwNjE0MDgzMzUwWjBrMQswCQYDVQQGEwJVUzEPMA0GA1UECBMGTmV2YWRhMRIwEAYDVQQHEwlMYXMgVmVnYXMxETAPBgNVBAoTCEJyb2FkY29tMQ0wCwYDVQQLEwRBUElNMRUwEwYDVQQDEwxrYWZrYS1jbGllbnQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCtH4rfIaU408yNtiUeFcEcANfAIt4KxVrwjwIRyVFtp1jg0toAB9ahBv2HEg6Q7lekcqmiGVFoNzZsbI5M0+eK5wCsA2r1vEpDmlHDv9OWqbmXYMpUcbbaqad8o571zkCXtJOe/r7fVW0a1EBMHZAbvPilUP1yD0IQQ8s+XzY3u5BR+Xp/UIDbx/w1M1feFWZ0aAe1Ya0THeALJx/lmeYFv9DiJO50z3/GnYgVY6P+9en7oOLl6wJtwjjMG+hJGlu5TcBzNFK1RYKhvUd1QTrXvj4uRkNEc6IMx6S+HmeSLJV2G5P4AH4hOmJbNFsKibBa8JZNQoUYW1OAbuDhHzKxAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBACultj4TlZVelmkhvl1RWysifvo5zr9N0TLu8nwe23cspHq+01c/cKf+9WjrfNSo7g1avCe+f4J9HgzekWv4R/Jw/92Mg8hkbc9UyLvheosHcUG0uSFZP0Xt4vN1jaE4p+Bpbd8+s3dsAVrFAgBcl9IbkPxnuFjti37Wg2ei2OjwoPEx141sjDmi4L03r/Hvv2hwZuTrr7JD99RXcWWaWFIVTGL/rULCrEpTa+xIUATesTyi6zmlpm2/Dbx5sSPGApw8CSwGOBZJoSczyPVtsOi9eBKEkD0yXNdjthlq+K5Ze9w3ZXktC2yOO0Xd47ShwBb/vu0QNP0bdGCgjCF7iD4=</l7:Encoded>
+                        </l7:CertificateData>
+                        <l7:CertificateData>
+                            <l7:IssuerName>CN%3Dkafka-client-ca%2COU%3DAPIM%2CO%3DBroadcom%2CL%3DLas+Vegas%2CST%3DNevada%2CC%3DUS</l7:IssuerName>
+                            <l7:SerialNumber>17361464874645180187</l7:SerialNumber>
+                            <l7:SubjectName>CN%3Dkafka-client-ca%2COU%3DAPIM%2CO%3DBroadcom%2CL%3DLas+Vegas%2CST%3DNevada%2CC%3DUS</l7:SubjectName>
+                            <l7:Encoded>MIIDWDCCAkACCQDw8FBRiaXPGzANBgkqhkiG9w0BAQsFADBuMQswCQYDVQQGEwJVUzEPMA0GA1UECAwGTmV2YWRhMRIwEAYDVQQHDAlMYXMgVmVnYXMxETAPBgNVBAoMCEJyb2FkY29tMQ0wCwYDVQQLDARBUElNMRgwFgYDVQQDDA9rYWZrYS1jbGllbnQtY2EwHhcNMTkwNjE3MDgzMDE1WhcNMjkwNjE0MDgzMDE1WjBuMQswCQYDVQQGEwJVUzEPMA0GA1UECAwGTmV2YWRhMRIwEAYDVQQHDAlMYXMgVmVnYXMxETAPBgNVBAoMCEJyb2FkY29tMQ0wCwYDVQQLDARBUElNMRgwFgYDVQQDDA9rYWZrYS1jbGllbnQtY2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDEZCT08CRyAbL2geh9I2F7hVUqJwdZPlx8pKEJaV/0I7Oqi/8CcCIqBCS62z+X9Qv359Qk7rJmm0IlU8+qxB9viDUfoNkFv6AZlCotf+4KBB/U2cpWVqc7JcQSH5VbfVMFHxM/MBYWVby04MWt9uRl0Y1UP1rtkzixfwkmGiK1kxh5mQz7ELwbGvW19P0QP/WjsvoL2F1kO7QgLO+GuZ1OQcIq7nhvySGrzXSbJLD+qZplpoq+KYATfKYN2g6fP/hg7BcFWLkrlR55mdAQeuOlsCI4qWQvZppKBGLxddfakid7IAIZi9qUDaVRWHmQM9prVC3q5Up5IKS151PX9thHAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAE5mHkRBITCQnFF7ADCbnplZMxcJbyEDitfm3/ScCcIIVUj/bURsFXbr2WMjHe7taLFa84zp0Jdkd4ukBXQeKQubh29GJ8v8bpQplIUOctgXMlbxCm9K66gtTeo8qy1FlPravUQuDok+BXmHRB0xQ4c5qPHgo5Po/pvx27GVmH55XSjnxuPF0bc5SvomAl5T+DzAThxR7c0LXS7QmEmhcG0VzE9w+3bCuXtdgSr80ZlcxtXWeflc8PaEFudLmp++4Qc4NFJy1MyIGJ+MdECQXe2ZrxnzDK5d+Douz/C+r9CTwU5zJ3PeREIYvBlwCmTOB29Lx/NGsGnOn5pSUl3XCQk=</l7:Encoded>
+                        </l7:CertificateData>
+                    </l7:CertificateChain>
+                    <l7:Properties>
+                        <l7:Property key="keyAlgorithm">
+                            <l7:StringValue>RSA</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="keyData">
+                            <l7:StringValue bundleKey="$L7C2$1bead,Czstbu5O/mXcvI8E4rFwTXGBKiQeVJRdAAp+H0MZCnQ=$TIPBc6J5Yep1rQipvHgHtHlbWktx1UNIdjaUb19srSjymmzwA6vwuj/8qw0P2XzEwI4+UGK3xRxf9RancPOL2Os/SOEq+jENAa9oyZj3yxZIhoMKAMgPgjfFB5//tyg5" algorithm="RSA">$L7C2$1,6RlIgXA9gOJ2Iqc6zsV2goAIb1mC1hREeyjzkC6fIlM=$7jCEWhr+kYIwpW1PFBw8oP2mRQlyo9nbvAJvVVOK9m45NS3BreCiAO9de9lkfo/rvBeG2gPwujc1LChGQ0WQqOa1rTBkVpC53Q8UkfJZK/TgjYObeJGs9A6mguBRRF8XjFAdRRfUeZmBqwIz0eUBY165V09QsRnAPvwqmpuOe427CzDSotkZrYNNe2kDt+z0ICggeYGtQmI8dzGOeY0HcwHbo4cj+/+oNNnlFZruaVss+cNtKF10dJR4vADtx4V4XFHMRI8UT0ysstF+5BqXekoOG5UhWAvMxVjCeD1AQ5rI/Rz44TnsEl/CsC0AfnzMeVwwUDY5yR3DuXvvemIycrX64lnUpdJqsaw3+Hw552tp+3KEhcT/qNmrwf5nwAdD4CXKSK4nRAolMUHBVmTYSgg+k2Sq53RAt3+VGl4VlmLPK2Emo87xn32FYNvEx2ykxhpt+sYW06to7JfR4M/37rOnu6N58W291TUck6kafp9oj1f+yEa5by1kDDR3BrLmQun77eupbBdoPbEOlYBJcD3gQQ6Nr5zPNE+SudndHuI14ahRbyPAVvZN89S6FQs5bkTGewUOk9WU6Mqb276KXkxssRdFeh96G5Hui12njcCFLpBW7AumFjBJu0nk0KumWuvnQ+R/fGdOJLyA1cPfuCmn+lMxTw8T+NOGw3c5OqKBNXohN/z4CZ5yE6JpsNCDZ/XaMrfC5n25Gub3/MgqjSihD8nqrngjHx/UqQYPglK1lgdlAhRS+7YSaqx315OetMftLwI7vup9gSl1HHnrE5o2ehD7VMGywgWQDRtUZJhh2wrAw1ST+MeCddyr0KzOXZT6gV3VomvRIEkDH2sZIj895/gTAjA/4nOkSC74xDqiq6boNeoO6uB7MQ3uDHJWZWqVFRvRRkgih1udnIWdyG/k5tF7vPnT7NsCBRMXjgHZWfeus6f3arC8oKAz725Ype2v750w6eIWguDcHiK6CEkre+5UClIB+b8YPsMOjY6VGRjCU8Tr1AH2dLK92BuEVmalydYRUyOkaz8wWmmAiBH0gRJoexRCaTImEjEy7Xp7A8T+X9eT2XAcYjtrQoeqnxnI10kck1aNAOPn6z5oH2AxfUJxD5kGYmPIClXh2+CPJMAtylFSa7G/HYKn/3FqYm+XPBsp9Uy8R1hXAEUJ+sT7XRYdo6SHJUStPNn7rVrmpdBY5wLPZYpqwaDzf+2SpyuMFYh2aHftqVq78BrobgQQ10rjOzlYz1+s6sZ31N5gWbbx3uPl1stzFKgc1crpKTSv8iRES1yXou4Sf2tW5Il6OWXoZW9RCDONTMFwXRcQTgyQ/hAWF2ngC0GSh6HEbjEMZwP0J7eKe27idcvllYCFAlsGliz+gBFyakWPEix5Pa/efCdleLE6ihGg4tZGDqP4D20ISm7/QcnfxlbTHRd5oG/kIIZJCkaRVaB0c7KSkr2GjI8v2KCWMaUyj4/HB9Q/b0SEpPgSI0nwa4a0MUip5FD8e2TTKllOQooxijaSdq8ifuyaTPkGbU6Qbdelas/CUGgNZ33pcia5g8EyHSoGI0TZYUKXYEManL8kU8hucwyFW3OkAuIyjacxFHv59+JtUz0gz7V2uiU2noEyJ5BNzsppcObjAhYwiEAXSwBHwJJ938udTqhks0sxEoEOLJpDuBfIR1vSi9VJKYouQ4eq+F9aydPWxnlfNEpUqx4=</l7:StringValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:PrivateKey>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>apim-kafka-01.lvn.broadcom.net</l7:Name>
+            <l7:Id>4babdc77f45f6090bfe16c374484ebd2</l7:Id>
+            <l7:Type>TRUSTED_CERT</l7:Type>
+            <l7:TimeStamp>2019-07-17T09:05:30.509Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:TrustedCertificate id="4babdc77f45f6090bfe16c374484ebd2" version="0">
+                    <l7:Name>apim-kafka-01.lvn.broadcom.net</l7:Name>
+                    <l7:CertificateData>
+                        <l7:IssuerName>CN%3Dkafka-ca%2COU%3DAPIM%2CO%3DBroadcom%2CL%3DLas+Vegas%2CST%3DNevada%2CC%3DUS</l7:IssuerName>
+                        <l7:SerialNumber>11622152679767698440</l7:SerialNumber>
+                        <l7:SubjectName>CN%3Dapim-kafka-01.lvn.broadcom.net%2COU%3DAPIM%2CO%3DBroadcom%2CL%3DLas+Vegas%2CST%3DNevada%2CC%3DUS</l7:SubjectName>
+                        <l7:Encoded>MIIDYDCCAkgCCQChSi5JEuhsCDANBgkqhkiG9w0BAQUFADBnMQswCQYDVQQGEwJVUzEPMA0GA1UECAwGTmV2YWRhMRIwEAYDVQQHDAlMYXMgVmVnYXMxETAPBgNVBAoMCEJyb2FkY29tMQ0wCwYDVQQLDARBUElNMREwDwYDVQQDDAhrYWZrYS1jYTAeFw0xOTA2MDYxMTI5MzZaFw0yOTA2MDMxMTI5MzZaMH0xCzAJBgNVBAYTAlVTMQ8wDQYDVQQIEwZOZXZhZGExEjAQBgNVBAcTCUxhcyBWZWdhczERMA8GA1UEChMIQnJvYWRjb20xDTALBgNVBAsTBEFQSU0xJzAlBgNVBAMTHmFwaW0ta2Fma2EtMDEubHZuLmJyb2FkY29tLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJo1PG1sVZKX8/3subyHPrH8iu5Y34DPfOg1eoaHHaE26rTJhVd5SFHyNqFy3yd31ggBLXsQAi3wp7P24vXkAV3Iebg6A6PVTCSSveIgiHqJohfIAkcpe1JBx9iroSYvUrmKbhD7nIHJBCb8gSPAtwgA1s2sUjc7tCfvWpJbXaeUkn8uaTnNEkpDI7qv1U8w/nAmLKkGK8UysKqAmc5zcrMpdvZbdJuayuErfgluslL4hkXB0wELgU3Rlz+gTwrkJMBPFez+LV1BM2VdXTeC+rJxa9goJ3LjJruqoMgbv90uNLa13dzZykuNbhSjSDdLkg1iJUfIB/F+taJtyTatG2kCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEADw6tSZuJQZ2ovFHy5v2KJ86dQfvN1coeYBZozLzE2OTpvhL0NkKxUNQA597CpMOAoUGWuGmIjdLC7s7fKXFH/LwIfs7M9ptP38wpp5+KN9+R42LmJ1phRM/sw6C66vIh3ImTO+xO1fPBd0k8LIjBoG1YvbbR1mBqNqc9GDQSompliVgXuu6aCRJrCEj5h04urOh2kurrA6swMK/JwbT6NpdVKiN+hvSsF2bViayvRSjwLAx7scWcrFFQUUwDao0pxKfhuDqrguDEWCO/PSWEc1GEdrpxgMPDI48g3a7bn2irHpaolIPDpUQsjK4kxMFA0ucGngxAVBZaSFrrCcRq/w==</l7:Encoded>
+                    </l7:CertificateData>
+                    <l7:Properties>
+                        <l7:Property key="revocationCheckingEnabled">
+                            <l7:BooleanValue>true</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="trustAnchor">
+                            <l7:BooleanValue>true</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="trustedAsSamlAttestingEntity">
+                            <l7:BooleanValue>false</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="trustedAsSamlIssuer">
+                            <l7:BooleanValue>false</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="trustedForSigningClientCerts">
+                            <l7:BooleanValue>false</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="trustedForSigningServerCerts">
+                            <l7:BooleanValue>true</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="trustedForSsl">
+                            <l7:BooleanValue>true</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="verifyHostname">
+                            <l7:BooleanValue>false</l7:BooleanValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:TrustedCertificate>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>kafka</l7:Name>
+            <l7:Id>d0fba396a0b3e71675070e0c87ada4ed</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.550Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="71489e6b3f531c24ce7c374951175634" id="d0fba396a0b3e71675070e0c87ada4ed" version="0">
+                    <l7:Name>kafka</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>kafka</l7:Name>
+            <l7:Id>d0fba396a0b3e71675070e0c87ada4ac</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.550Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="71489e6b3f531c24ce7c374951182279" id="d0fba396a0b3e71675070e0c87ada4ac" version="0">
+                    <l7:Name>kafka</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>non_ssl_client</l7:Name>
+            <l7:Id>e328d13762a42f8c8501bd64db6c30b3</l7:Id>
+            <l7:Type>SSG_ACTIVE_CONNECTOR</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.566Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:ActiveConnector id="e328d13762a42f8c8501bd64db6c30b3" version="3">
+                    <l7:Name>non_ssl_client</l7:Name>
+                    <l7:Enabled>true</l7:Enabled>
+                    <l7:Type>KafkaClient</l7:Type>
+                    <l7:Properties>
+                        <l7:Property key="kafka.bootstrapServers">
+                            <l7:StringValue>apim-kafka-01.lvn.broadcom.net:9092</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.enableTls">
+                            <l7:StringValue>false</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.producer.acknowledgement">
+                            <l7:StringValue>0</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.producer.idempotence">
+                            <l7:StringValue>false</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.producer.retries">
+                            <l7:StringValue></l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.role">
+                            <l7:StringValue>producer</l7:StringValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:ActiveConnector>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>kafka-non-ssl</l7:Name>
+            <l7:Id>d0fba396a0b3e71675070e0c87ada542</l7:Id>
+            <l7:Type>POLICY</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.567Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Policy guid="2a0ea811-3b3d-4c08-864e-ab45229bbdfd" id="d0fba396a0b3e71675070e0c87ada542" version="4">
+                    <l7:PolicyDetail folderId="d0fba396a0b3e71675070e0c87ada4ac" guid="2a0ea811-3b3d-4c08-864e-ab45229bbdfd" id="d0fba396a0b3e71675070e0c87ada542" version="4">
+                        <l7:Name>kafka-non-ssl</l7:Name>
+                        <l7:PolicyType>Include</l7:PolicyType>
+                        <l7:Properties>
+                            <l7:Property key="revision">
+                                <l7:LongValue>5</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:PolicyDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:CommentAssertion&gt;
+                                &lt;L7p:Comment stringValue=&quot;Policy Fragment: kafka-non-ssl&quot;/&gt;
+                                &lt;/L7p:CommentAssertion&gt;
+                                &lt;wsp:OneOrMore wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:FaultLevel&gt;
+                                &lt;L7p:LevelInfo soapFaultLevel=&quot;included&quot;&gt;
+                                &lt;L7p:Level intValue=&quot;4&quot;/&gt;
+                                &lt;/L7p:LevelInfo&gt;
+                                &lt;/L7p:FaultLevel&gt;
+                                &lt;L7p:KafkaRouting&gt;
+                                &lt;L7p:AckTimeout stringValue=&quot;&quot;/&gt;
+                                &lt;L7p:ClientConfigGoid goidValue=&quot;e328d13762a42f8c8501bd64db6c30b3&quot;/&gt;
+                                &lt;L7p:ClientConfigName stringValue=&quot;non_ssl_client&quot;/&gt;
+                                &lt;L7p:Topic stringValue=&quot;Topic-1&quot;/&gt;
+                                &lt;L7p:WaitForAck booleanValue=&quot;false&quot;/&gt;
+				 &lt;/L7p:KafkaRouting&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;S2Fma2EgQXNzZXJ0aW9uOiBzdWNjZXNzZnVsbHkgd3JvdGUgdGhlIG1zZyB0byB0aGUga2Fma2EgY2x1c3RlciBwYXJ0aXRpb24=&quot;/&gt;
+                                &lt;L7p:ContentType stringValue=&quot;application/json; charset=utf-8&quot;/&gt;
+                                &lt;L7p:DataType variableDataType=&quot;message&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;returnMessage&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;S2Fma2EgQXNzZXJ0aW9uOiBGYWlsZWQgdG8gd3JpdGUgdGhlIG1zZyB0byBLYWZ0YSBjbHVzdGVyISE=&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;returnMessage&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;/wsp:OneOrMore&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;/wsp:Policy&gt;
+                            </l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Policy>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>Routing (Non Ssl)</l7:Name>
+            <l7:Id>d0fba396a0b3e71675070e0c87ada622</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.575Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="d0fba396a0b3e71675070e0c87ada622" version="2">
+                    <l7:ServiceDetail folderId="d0fba396a0b3e71675070e0c87ada4ed" id="d0fba396a0b3e71675070e0c87ada622" version="2">
+                        <l7:Name>Routing (Non Ssl)</l7:Name>
+                        <l7:Enabled>true</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>/kafka/routing/non_ssl</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>GET</l7:Verb>
+                                    <l7:Verb>POST</l7:Verb>
+                                    <l7:Verb>PUT</l7:Verb>
+                                    <l7:Verb>DELETE</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>4</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="3">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;UmVxdWVzdDogUE9TVCByZXF1ZXN0IHRvIHRoaXMgZW5kcG9pbnQuIENvbnRlbnQgc2VudCBoZXJlIHdpbGwgYmUgZm9yd2FyZGVkIHRvIHRoZSBjb25maWd1cmVkIGthZmthIGNsdXN0ZXIgdG9waWMuIEdhdGV3YXkgd2lsbCBhY3QgYXMgYSBwcm9kdWNlciBpbiB0aGlzIGNhc2UuDQpSZXNwb25zZTogUmV0dXJucyBzdWNjZXNzZnVsIG1zZyBjb250YWluaW5nIHRoZSBrYWZrYSBjbHVzdGVyIHBhcml0aWlvbiBudW1iZXIgdG8gd2hpY2ggdGhlIGlucHV0IG1zZyB3YXMgc3VjY2Vzc2Z1bGx5IHdyaXR0ZW4gdG8uIE90aGVyd2lzZSwgYSBmYWlsdXJlIG1zZyB3aWxsIGJlIHJldHVybmVkLg==&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;help&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;6f016e20-e7b7-4228-a22f-e64c6fb0ae51&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;34c9541b-ae5b-4850-b196-bad6fd641919&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;81d7a287-a457-4282-80c7-5a24b811b6d6&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;2a0ea811-3b3d-4c08-864e-ab45229bbdfd&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:HardcodedResponse&gt;
+                                &lt;L7p:Base64ResponseBody stringValue=&quot;JHtyZXR1cm5NZXNzYWdlfQ==&quot;/&gt;
+                                &lt;L7p:ResponseContentType stringValue=&quot;text/plain; charset=UTF-8&quot;/&gt;
+                                &lt;/L7p:HardcodedResponse&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;/wsp:Policy&gt;
+                            </l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>ssl_client</l7:Name>
+            <l7:Id>e328d13762a42f8c8501bd64db6c321b</l7:Id>
+            <l7:Type>SSG_ACTIVE_CONNECTOR</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.575Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:ActiveConnector id="e328d13762a42f8c8501bd64db6c321b" version="2">
+                    <l7:Name>ssl_client</l7:Name>
+                    <l7:Enabled>true</l7:Enabled>
+                    <l7:Type>KafkaClient</l7:Type>
+                    <l7:Properties>
+                        <l7:Property key="kafka.bootstrapServers">
+                            <l7:StringValue>apim-kafka-01.lvn.broadcom.net:9093</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.enableTls">
+                            <l7:StringValue>true</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.keyStoreGoid">
+                            <l7:StringValue>00000000000000000000000000000002</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.privateKeyAlias">
+                            <l7:StringValue>kafka-client</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.producer.acknowledgement">
+                            <l7:StringValue>0</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.producer.idempotence">
+                            <l7:StringValue>false</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.producer.retries">
+                            <l7:StringValue></l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.role">
+                            <l7:StringValue>producer</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="kafka.username">
+                            <l7:StringValue></l7:StringValue>
+                        </l7:Property>
+                    </l7:Properties>
+                </l7:ActiveConnector>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>kafka-ssl</l7:Name>
+            <l7:Id>d0fba396a0b3e71675070e0c87ada55b</l7:Id>
+            <l7:Type>POLICY</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.577Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Policy guid="ce856da3-28ed-40f2-b9e9-80781ee0b9b8" id="d0fba396a0b3e71675070e0c87ada55b" version="2">
+                    <l7:PolicyDetail folderId="d0fba396a0b3e71675070e0c87ada4ac" guid="ce856da3-28ed-40f2-b9e9-80781ee0b9b8" id="d0fba396a0b3e71675070e0c87ada55b" version="2">
+                        <l7:Name>kafka-ssl</l7:Name>
+                        <l7:PolicyType>Include</l7:PolicyType>
+                        <l7:Properties>
+                            <l7:Property key="revision">
+                                <l7:LongValue>3</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:PolicyDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:CommentAssertion&gt;
+                                &lt;L7p:Comment stringValue=&quot;Policy Fragment: kafka-ssl&quot;/&gt;
+                                &lt;/L7p:CommentAssertion&gt;
+                                &lt;wsp:OneOrMore wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:FaultLevel&gt;
+                                &lt;L7p:LevelInfo soapFaultLevel=&quot;included&quot;&gt;
+                                &lt;L7p:Level intValue=&quot;4&quot;/&gt;
+                                &lt;/L7p:LevelInfo&gt;
+                                &lt;/L7p:FaultLevel&gt;
+                                &lt;L7p:KafkaRouting&gt;
+                                &lt;L7p:AckTimeout stringValue=&quot;&quot;/&gt;
+                                &lt;L7p:ClientConfigGoid goidValue=&quot;e328d13762a42f8c8501bd64db6c321b&quot;/&gt;
+                                &lt;L7p:ClientConfigName stringValue=&quot;ssl_client&quot;/&gt;
+                                &lt;L7p:Topic stringValue=&quot;Topic-1&quot;/&gt;
+                                &lt;L7p:WaitForAck booleanValue=&quot;false&quot;/&gt;
+				 &lt;/L7p:KafkaRouting&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;S2Fma2EgQXNzZXJ0aW9uOiBzdWNjZXNzZnVsbHkgd3JvdGUgdGhlIG1zZyB0byB0aGUga2Fma2EgY2x1c3RlciBwYXJ0aXRpb24=&quot;/&gt;
+                                &lt;L7p:ContentType stringValue=&quot;application/json; charset=utf-8&quot;/&gt;
+                                &lt;L7p:DataType variableDataType=&quot;message&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;returnMessage&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;S2Fma2EgQXNzZXJ0aW9uOiBGYWlsZWQgdG8gd3JpdGUgdGhlIG1zZyB0byBLYWZ0YSBjbHVzdGVyISE=&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;returnMessage&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;/wsp:OneOrMore&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;/wsp:Policy&gt;
+                            </l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Policy>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>Routing (Ssl)</l7:Name>
+            <l7:Id>d0fba396a0b3e71675070e0c87ada667</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2019-10-17T09:57:50.580Z</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="d0fba396a0b3e71675070e0c87ada667" version="2">
+                    <l7:ServiceDetail folderId="d0fba396a0b3e71675070e0c87ada4ed" id="d0fba396a0b3e71675070e0c87ada667" version="2">
+                        <l7:Name>Routing (Ssl)</l7:Name>
+                        <l7:Enabled>true</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>/kafka/routing/ssl</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>GET</l7:Verb>
+                                    <l7:Verb>POST</l7:Verb>
+                                    <l7:Verb>PUT</l7:Verb>
+                                    <l7:Verb>DELETE</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>3</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="2">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;UmVxdWVzdDogUE9TVCByZXF1ZXN0IHRvIHRoaXMgZW5kcG9pbnQuIENvbnRlbnQgc2VudCBoZXJlIHdpbGwgYmUgZm9yd2FyZGVkIHRvIHRoZSBjb25maWd1cmVkIGthZmthIGNsdXN0ZXIgdG9waWMuIEdhdGV3YXkgd2lsbCBhY3QgYXMgYSBwcm9kdWNlciBpbiB0aGlzIGNhc2UuDQpSZXNwb25zZTogUmV0dXJucyBzdWNjZXNzZnVsIG1zZyBjb250YWluaW5nIHRoZSBrYWZrYSBjbHVzdGVyIHBhcml0aWlvbiBudW1iZXIgdG8gd2hpY2ggdGhlIGlucHV0IG1zZyB3YXMgc3VjY2Vzc2Z1bGx5IHdyaXR0ZW4gdG8uIE90aGVyd2lzZSwgYSBmYWlsdXJlIG1zZyB3aWxsIGJlIHJldHVybmVkLg==&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;help&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;6f016e20-e7b7-4228-a22f-e64c6fb0ae51&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;34c9541b-ae5b-4850-b196-bad6fd641919&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:Enabled booleanValue=&quot;false&quot;/&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;81d7a287-a457-4282-80c7-5a24b811b6d6&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;ce856da3-28ed-40f2-b9e9-80781ee0b9b8&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:HardcodedResponse&gt;
+                                &lt;L7p:Base64ResponseBody stringValue=&quot;JHtyZXR1cm5NZXNzYWdlfQ==&quot;/&gt;
+                                &lt;L7p:ResponseContentType stringValue=&quot;text/plain; charset=UTF-8&quot;/&gt;
+                                &lt;/L7p:HardcodedResponse&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;/wsp:Policy&gt;
+                            </l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+    </l7:References>
+    <l7:Mappings>
+        <l7:Mapping action="NewOrExisting" srcId="d0fba396a0b3e71675070e0c87ada4ed" srcUri="https://ibnqa000940:8443/restman/1.0/folders/d0fba396a0b3e71675070e0c87ada4ed" type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="d0fba396a0b3e71675070e0c87ada4ac" srcUri="https://ibnqa000940:8443/restman/1.0/folders/d0fba396a0b3e71675070e0c87ada4ac" type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="d0fba396a0b3e71675070e0c87ada542" srcUri="https://ibnqa000940:8443/restman/1.0/policies/d0fba396a0b3e71675070e0c87ada542" type="POLICY"/>
+        <l7:Mapping action="NewOrExisting" srcId="e328d13762a42f8c8501bd64db6c30b3" srcUri="https://ibnqa000940:8443/restman/1.0/activeConnectors/e328d13762a42f8c8501bd64db6c30b3" type="SSG_ACTIVE_CONNECTOR"/>
+        <l7:Mapping action="NewOrExisting" srcId="d0fba396a0b3e71675070e0c87ada622" srcUri="https://ibnqa000940:8443/restman/1.0/services/d0fba396a0b3e71675070e0c87ada622" type="SERVICE"/>
+        <l7:Mapping action="NewOrExisting" srcId="e328d13762a42f8c8501bd64db6c321b" srcUri="https://ibnqa000940:8443/restman/1.0/activeConnectors/e328d13762a42f8c8501bd64db6c321b" type="SSG_ACTIVE_CONNECTOR"/>
+        <l7:Mapping action="NewOrExisting" srcId="d0fba396a0b3e71675070e0c87ada55b" srcUri="https://ibnqa000940:8443/restman/1.0/policies/d0fba396a0b3e71675070e0c87ada55b" type="POLICY"/>
+        <l7:Mapping action="NewOrExisting" srcId="d0fba396a0b3e71675070e0c87ada667" srcUri="https://ibnqa000940:8443/restman/1.0/services/d0fba396a0b3e71675070e0c87ada667" type="SERVICE"/>
+        <l7:Mapping action="NewOrExisting" srcId="00000000000000000000000000000002:kafka-client" srcUri="https://ee47bf1d2f77:32770/restman/1.0/privateKeys/00000000000000000000000000000002:kafka-client" type="SSG_KEY_ENTRY"/>
+        <l7:Mapping action="NewOrExisting" srcId="4babdc77f45f6090bfe16c374484ebd2" srcUri="https://2c6ba4146964:32776/restman/1.0/trustedCertificates/4babdc77f45f6090bfe16c374484ebd2" type="TRUSTED_CERT"/>
+    </l7:Mappings>
+</l7:Bundle>
