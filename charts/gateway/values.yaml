@@ -616,8 +616,13 @@ customConfig:
 # Helm also keeps a revision of each deployment that will include the bundle definition, if that exceeds 1MB then the same error will occur.
 # We recommend using the existingBundle configuration below. This allows you to manage Gateway Deployment Config and Services separately.
 bundle:
-  enabled: false
-  path: "bundles/*.bundle"
+  enabled: true
+  path: "bundles/base-folders.bundle"
+  path: "bundles/CA-Precision-API-Monitoring-3.4.33-for-API-Gateway.xml"
+  path: "bundles/decryption.bundle.xml"
+  path: "bundles/encryption-route.bundle.xml"
+  path: "bundles/encryption.bundle.xml"
+  #path: "bundles/*.bundle"
 
 livenessProbe:
   enabled: true
