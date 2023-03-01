@@ -618,10 +618,9 @@ customConfig:
 bundle:
   enabled: true
   path: "bundles/base-folders.bundle"
-  path: "bundles/CA-Precision-API-Monitoring-3.4.33-for-API-Gateway.xml"
-  path: "bundles/decryption.bundle.xml"
-  path: "bundles/encryption-route.bundle.xml"
-  path: "bundles/encryption.bundle.xml"
+  #path: "bundles/decryption.bundle.xml"
+  #path: "bundles/encryption-route.bundle.xml"
+  #path: "bundles/encryption.bundle.xml"
   #path: "bundles/*.bundle"
 
 livenessProbe:
