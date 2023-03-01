@@ -562,13 +562,14 @@ additionalSecret: {}
 
 # Bundles that contain sensitive information can be mounted using the Kubernetes CSI Driver
 existingBundle:
-  enabled: false
-  configMaps: []
- # - name: mybundle1
-    # configMap:
-    #   defaultMode: 420
-    #   optional: false
-    #   name: mybundle1
+  enabled: true
+  configMaps:
+  - name: base-folders-bundle
+    configMap:
+      defaultMode: 420
+      optional: false
+      name: base-folders-bundle
+
  # - name: mybundle2
   secrets: []
   # - name: mysecretbundle1
