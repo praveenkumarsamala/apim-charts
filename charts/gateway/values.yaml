@@ -165,7 +165,7 @@ config:
       com.l7tech.server.log.ConsoleMessageSink$L7ConsoleHandler.formatter = com.l7tech.util.JsonLogFormatter
       com.l7tech.server.log.ConsoleMessageSink$L7ConsoleHandler.level = CONFIG
   cwp:
-    enabled: false
+    enabled: true
     properties:
       - name: io.httpsHostAllowWildcard
         value: true
@@ -178,6 +178,8 @@ config:
           com.l7tech.external.assertions.comparison.server.ServerComparisonAssertion = SEVERE
       - name: audit.setDetailLevel.FINE
         value: 152 7101 7103 9648 9645 7026 7027 4155 150 4716 4114 6306 4100 9655 150 151 11000 4104
+      - name: template.partBodyMaxSize
+        value: 12582912
   systemProperties: |-
     # Default Gateway system properties
     # Configuration properties for shared state extensions.
