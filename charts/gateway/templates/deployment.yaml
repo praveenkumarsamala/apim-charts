@@ -64,6 +64,7 @@ spec:
                   - '/bin/sh'
                   - '-c'
                   - |
+                    sleep 600
                     echo "testing... step4" >> /tmp/test.out
                     echo "Testing... step1"
                     declare -i restmanReadyAttempted=0
