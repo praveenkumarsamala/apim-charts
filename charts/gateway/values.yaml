@@ -616,6 +616,7 @@ customConfig:
 # We recommend using the existingBundle configuration below. This allows you to manage Gateway Deployment Config and Services separately.
 bundle:
   enabled: false
+  path: "bundles/*.bundle"
 
 livenessProbe:
   enabled: true
