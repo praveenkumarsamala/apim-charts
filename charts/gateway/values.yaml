@@ -567,7 +567,6 @@ existingBundle:
     #   defaultMode: 420
     #   optional: false
     #   name: mybundle1
-
  # - name: mybundle2
   secrets: []
   # - name: mysecretbundle1
