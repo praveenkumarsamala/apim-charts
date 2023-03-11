@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:References>
+        <l7:Item>
+            <l7:Name>jwt</l7:Name>
+            <l7:Id>32f058915d9467e01aed556936884771</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2022-06-13T23:38:45.897-07:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="71489e6b3f531c24ce7c374951182279" id="32f058915d9467e01aed556936884771"
+                           version="1">
+                    <l7:Name>jwt</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>encode_jwt</l7:Name>
+            <l7:Id>32f058915d9467e01aed5569368847c2</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2022-06-13T23:35:09.982-07:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="71489e6b3f531c24ce7c37495117573b" id="32f058915d9467e01aed5569368847c2"
+                           version="0">
+                    <l7:Name>encode_jwt</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>encode_jwt</l7:Name>
+            <l7:Id>32f058915d9467e01aed556936884822</l7:Id>
+            <l7:Type>POLICY</l7:Type>
+            <l7:TimeStamp>2022-06-13T23:35:10.005-07:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Policy guid="20d14dfa-f9a7-4420-aec0-33b587a55632" id="32f058915d9467e01aed556936884822"
+                           version="3">
+                    <l7:PolicyDetail folderId="32f058915d9467e01aed556936884771"
+                                     guid="20d14dfa-f9a7-4420-aec0-33b587a55632" id="32f058915d9467e01aed556936884822"
+                                     version="3">
+                        <l7:Name>encode_jwt</l7:Name>
+                        <l7:PolicyType>Include</l7:PolicyType>
+                        <l7:Properties>
+                            <l7:Property key="hasRouting">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="revision">
+                                <l7:LongValue>4</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:PolicyDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:CommentAssertion&gt;
+                                &lt;L7p:Comment stringValue=&quot;Policy Fragment: encode_jwt&quot;/&gt;
+                                &lt;/L7p:CommentAssertion&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;ew0KICJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlDQp9&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;payload&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;L7p:SetVariable&gt;
+                                &lt;L7p:Base64Expression stringValue=&quot;JHtyZXF1ZXN0Lmh0dHAucGFyYW1ldGVyLmtleWFsaWFzfQ==&quot;/&gt;
+                                &lt;L7p:VariableToSet stringValue=&quot;keyalias&quot;/&gt;
+                                &lt;/L7p:SetVariable&gt;
+                                &lt;L7p:EncodeJsonWebToken&gt;
+                                &lt;L7p:DynamicPrivateKeyAliasVariable stringValue=&quot;${keyalias}&quot;/&gt;
+                                &lt;L7p:SignPayload booleanValue=&quot;true&quot;/&gt;
+                                &lt;L7p:SignatureAlgorithm stringValue=&quot;PS256&quot;/&gt;
+                                &lt;L7p:SignatureSourceType intValue=&quot;3&quot;/&gt;
+                                &lt;L7p:SourceVariable stringValue=&quot;${payload}&quot;/&gt;
+                                &lt;L7p:TargetVariable stringValue=&quot;jwt&quot;/&gt;
+                                &lt;/L7p:EncodeJsonWebToken&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;/wsp:Policy&gt;
+                            </l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Policy>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>JWT - encode - sign</l7:Name>
+            <l7:Id>32f058915d9467e01aed55693688485f</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2022-06-13T23:35:10.012-07:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="32f058915d9467e01aed55693688485f" version="2">
+                    <l7:ServiceDetail folderId="32f058915d9467e01aed5569368847c2" id="32f058915d9467e01aed55693688485f"
+                                      version="2">
+                        <l7:Name>JWT - encode - sign</l7:Name>
+                        <l7:Enabled>true</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>/test/encode_jwt</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>GET</l7:Verb>
+                                    <l7:Verb>POST</l7:Verb>
+                                    <l7:Verb>PUT</l7:Verb>
+                                    <l7:Verb>DELETE</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="hasRouting">
+                                <l7:BooleanValue>true</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>2</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>false</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="1">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                                &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                                &lt;L7p:Include&gt;
+                                &lt;L7p:PolicyGuid stringValue=&quot;20d14dfa-f9a7-4420-aec0-33b587a55632&quot;/&gt;
+                                &lt;/L7p:Include&gt;
+                                &lt;L7p:HardcodedResponse&gt;
+                                &lt;L7p:Base64ResponseBody stringValue=&quot;JHtqd3QuY29tcGFjdH0=&quot;/&gt;
+                                &lt;L7p:ResponseContentType stringValue=&quot;text/plain; charset=UTF-8&quot;/&gt;
+                                &lt;/L7p:HardcodedResponse&gt;
+                                &lt;/wsp:All&gt;
+                                &lt;/wsp:Policy&gt;
+                            </l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+    </l7:References>
+    <l7:Mappings>
+        <l7:Mapping action="NewOrExisting" srcId="32f058915d9467e01aed556936884771"
+                    srcUri="https://kubernetes.docker.internal:8443/restman/1.0/folders/32f058915d9467e01aed556936884771"
+                    type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="32f058915d9467e01aed5569368847c2"
+                    srcUri="https://kubernetes.docker.internal:8443/restman/1.0/folders/32f058915d9467e01aed5569368847c2"
+                    type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="32f058915d9467e01aed556936884822"
+                    srcUri="https://kubernetes.docker.internal:8443/restman/1.0/policies/32f058915d9467e01aed556936884822"
+                    type="POLICY"/>
+        <l7:Mapping action="NewOrExisting" srcId="32f058915d9467e01aed55693688485f"
+                    srcUri="https://kubernetes.docker.internal:8443/restman/1.0/services/32f058915d9467e01aed55693688485f"
+                    type="SERVICE"/>
+    </l7:Mappings>
+</l7:Bundle>
