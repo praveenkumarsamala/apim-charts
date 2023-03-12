@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+            <l7:References>
+                <l7:Item>
+                    <l7:Name>decryption</l7:Name>
+                    <l7:Id>a8193aada81db1c65e0b5d24fcb3fc96</l7:Id>
+                    <l7:Type>FOLDER</l7:Type>
+                    <l7:TimeStamp>2019-05-14T17:18:46.590-07:00</l7:TimeStamp>
+                    <l7:Link rel="self" uri="http://dhcp-10-175-247-219.lvn.broadcom.net:8080/restman/1.0/folders/a8193aada81db1c65e0b5d24fcb3fc96"/>
+                    <l7:Link rel="template" uri="http://dhcp-10-175-247-219.lvn.broadcom.net:8080/restman/1.0/folders/template"/>
+                    <l7:Link rel="list" uri="http://dhcp-10-175-247-219.lvn.broadcom.net:8080/restman/1.0/folders"/>
+                    <l7:Link rel="dependencies" uri="http://dhcp-10-175-247-219.lvn.broadcom.net:8080/restman/1.0/folders/a8193aada81db1c65e0b5d24fcb3fc96/dependencies"/>
+                    <l7:Link rel="parentFolder" uri="http://dhcp-10-175-247-219.lvn.broadcom.net:8080/restman/1.0/folders/71489e6b3f531c24ce7c374951175634"/>
+                    <l7:Resource>
+                        <l7:Folder folderId="71489e6b3f531c24ce7c374951175634" id="a8193aada81db1c65e0b5d24fcb3fc96" version="0">
+                            <l7:Name>decryption</l7:Name>
+                        </l7:Folder>
+                    </l7:Resource>
+                </l7:Item>
+                <l7:Item>
+                    <l7:Name>decryption_input</l7:Name>
+                    <l7:Id>a8193aada81db1c65e0b5d24fcb3e51f</l7:Id>
+                    <l7:Type>SERVICE</l7:Type>
+                    <l7:TimeStamp>2019-05-14T17:13:07.133-07:00</l7:TimeStamp>
+                    <l7:Resource>
+                        <l7:Service id="a8193aada81db1c65e0b5d24fcb3e51f" version="4">
+                            <l7:ServiceDetail folderId="a8193aada81db1c65e0b5d24fcb3fc96" id="a8193aada81db1c65e0b5d24fcb3e51f" version="4">
+                                <l7:Name>decryption_input</l7:Name>
+                                <l7:Enabled>true</l7:Enabled>
+                                <l7:ServiceMappings>
+                                    <l7:HttpMapping>
+                                        <l7:UrlPattern>/decryption_input</l7:UrlPattern>
+                                        <l7:Verbs>
+                                            <l7:Verb>GET</l7:Verb>
+                                            <l7:Verb>POST</l7:Verb>
+                                            <l7:Verb>PUT</l7:Verb>
+                                            <l7:Verb>DELETE</l7:Verb>
+                                        </l7:Verbs>
+                                    </l7:HttpMapping>
+                                </l7:ServiceMappings>
+                                <l7:Properties>
+                                    <l7:Property key="internal">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="policyRevision">
+                                        <l7:LongValue>7</l7:LongValue>
+                                    </l7:Property>
+                                    <l7:Property key="soap">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="tracingEnabled">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="wssProcessingEnabled">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                </l7:Properties>
+                            </l7:ServiceDetail>
+                            <l7:Resources>
+                                <l7:ResourceSet tag="policy">
+                                    <l7:Resource type="policy" version="1">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+    &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+        &lt;L7p:SetVariable&gt;
+            &lt;L7p:Base64Expression stringValue=&quot;PHNvYXBlbnY6RW52ZWxvcGUgeG1sbnM6c29hcGVudj0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZlbG9wZS8iIHhtbG5zOndzPSJodHRwOi8vd2FyZWhvdXNlLmFjbWUuY29tL3dzIj4NCiAgICA8c29hcGVudjpIZWFkZXI+DQogICAgICAgIDx3c3NlOlNlY3VyaXR5IHNvYXBlbnY6bXVzdFVuZGVyc3RhbmQ9IjEiIHhtbG5zOndzc2U9Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL3dzcy8yMDA0LzAxL29hc2lzLTIwMDQwMS13c3Mtd3NzZWN1cml0eS1zZWNleHQtMS4wLnhzZCIgeG1sbnM6d3N1PSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy93c3MvMjAwNC8wMS9vYXNpcy0yMDA0MDEtd3NzLXdzc2VjdXJpdHktdXRpbGl0eS0xLjAueHNkIj4NCiAgICAgICAgICAgIDx3c3U6VGltZXN0YW1wPg0KICAgICAgICAgICAgICAgIDx3c3U6Q3JlYXRlZD4yMDE5LTA1LTE1VDIwOjE4OjA1LjUyNTQ1OTUxNVo8L3dzdTpDcmVhdGVkPg0KICAgICAgICAgICAgICAgIDx3c3U6RXhwaXJlcz4yMDE5LTA1LTE1VDIwOjIzOjA1LjUyNVo8L3dzdTpFeHBpcmVzPg0KICAgICAgICAgICAgPC93c3U6VGltZXN0YW1wPg0KICAgICAgICAgICAgPHhlbmM6RW5jcnlwdGVkS2V5IHhtbG5zOnhlbmM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jIyI+DQogICAgICAgICAgICAgICAgPHhlbmM6RW5jcnlwdGlvbk1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jI3JzYS0xXzUiLz4NCiAgICAgICAgICAgICAgICA8ZHNpZzpLZXlJbmZvIHhtbG5zOmRzaWc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPg0KICAgICAgICAgICAgICAgICAgICA8d3NzZTpTZWN1cml0eVRva2VuUmVmZXJlbmNlPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHdzc2U6S2V5SWRlbnRpZmllciBFbmNvZGluZ1R5cGU9Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL3dzcy8yMDA0LzAxL29hc2lzLTIwMDQwMS13c3Mtc29hcC1tZXNzYWdlLXNlY3VyaXR5LTEuMCNCYXNlNjRCaW5hcnkiIFZhbHVlVHlwZT0iaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvd3NzLzIwMDQvMDEvb2FzaXMtMjAwNDAxLXdzcy14NTA5LXRva2VuLXByb2ZpbGUtMS4wI1g1MDlTdWJqZWN0S2V5SWRlbnRpZmllciI+YW5rYzRXejN5bmVMaHRyWncyOGIvd0s0czZZPTwvd3NzZTpLZXlJZGVudGlmaWVyPg0KICAgICAgICAgICAgICAgICAgICA8L3dzc2U6U2VjdXJpdHlUb2tlblJlZmVyZW5jZT4NCiAgICAgICAgICAgICAgICA8L2RzaWc6S2V5SW5mbz4NCiAgICAgICAgICAgICAgICA8eGVuYzpDaXBoZXJEYXRhPg0KICAgICAgICAgICAgICAgICAgICA8eGVuYzpDaXBoZXJWYWx1ZT5qT0piVGhHcW1PRDlHUldQeEwydVA4RnBobFVEbCt4bWx2c3RMdTJ0NHhQajdsblhhZkFHa1ZuQUVlczNnUHBpQWY3UTVyalhJL0p3UXUyU01rZ1RVWUZoSWdyRzBpTUloRG85YktaOWNud3Y4bVdUeDlkU3k2VzlWQnJLQWtSWndhVXNxb0c1cU1EamJLdHFRYWcreUIwNVJOT3VNK2dBT25WS0YrSzZsQzdQbnBDeGhGTHZFRHdsT2FrS0ZhRzFzK3dTbkVxMzRXSGpLVmFBRWhsZUY2bW9sclcxZXpjTTNFcUQ2YU80RlFiUmRBRzZXdEFNL2VLRlZnOXVpenZ0QW0yejYwendhaWpaMDlxRkYzbzZaY2tZcklzWkNJbFV6TGZoZDZKZHRhQndMNnMzWmZWU0wwbUtLcFNEZmFSTFBIWDVWUEZWU0FJU3VQR2pYTkNoRXc9PTwveGVuYzpDaXBoZXJWYWx1ZT4NCiAgICAgICAgICAgICAgICA8L3hlbmM6Q2lwaGVyRGF0YT4NCiAgICAgICAgICAgICAgICA8eGVuYzpSZWZlcmVuY2VMaXN0Pg0KICAgICAgICAgICAgICAgICAgICA8eGVuYzpEYXRhUmVmZXJlbmNlIFVSST0iI2lkLTAtODY4OTdlZjRlNWYwMjRmZGM1Mzk5YjgyNWE5YmY0NzIiLz4NCiAgICAgICAgICAgICAgICA8L3hlbmM6UmVmZXJlbmNlTGlzdD4NCiAgICAgICAgICAgIDwveGVuYzpFbmNyeXB0ZWRLZXk+DQogICAgICAgIDwvd3NzZTpTZWN1cml0eT4NCiAgICA8L3NvYXBlbnY6SGVhZGVyPg0KICAgIDxzb2FwZW52OkJvZHk+DQogICAgICAgIDxFbmNyeXB0ZWREYXRhIElkPSJpZC0wLTg2ODk3ZWY0ZTVmMDI0ZmRjNTM5OWI4MjVhOWJmNDcyIiBUeXBlPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNDb250ZW50IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxlbmMjIj4NCiAgICAgICAgICAgIDxFbmNyeXB0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8wNC94bWxlbmMjYWVzMTI4LWNiYyIvPg0KICAgICAgICAgICAgPENpcGhlckRhdGE+DQogICAgICAgICAgICAgICAgPENpcGhlclZhbHVlPjZ1MGczdE1BYkg4bE1lZEIwVjlnaTBDUHYrampGb24xODFuQUFvNzhtKzluRW9GYVAxUUwybFZUeFRDN09yakIvSkZJYllqSmZnb1Q1QXNhMmZlU0V3MWZQYkZXcEJIZFRLTHNvTFFBYUJPY0NGQ2VHOENQYmhaY1ZycXRlUnJ2V1VtYUtkUXlUYWJHcEhzbzZ2VkRNNTNFb2pLWXJ2OWlMdnBPZDltN0lKK1FrRU44Ym5vUEI2cjN6RUxHdzZOTEJ6bTdNYVlPemlOdFFZK0lmSHhZak42dUdFK1k1T3loODlMeDdNa1kyYUtqSzFvazlhclJ6bG9LOVdmZllWYWplS3I4OThPK1JKa2lZK0FwYno5Z1RWdEt2d2h6b21XM3lCdmZDYTk3QkVld0NtU2N5VHMwTjVuL2RPcEZncllyZG5paWQzYk1SMkNMM0lKbGtuTGxzaTBHWklESUVVaXU4bUlOMU00clFrTHgwL2JrZThneER2MWFsSDFFZFVWUUhMYjF3T0t6OFZqZ2VaQXVDOHB1clpWNzRUS1R6ZHZHQmdRM1NZdXJSNWFZVTB0bklteHVJQ2IrQVNXRysvYU9icFFEYXFoWEVOd3RZYi9vc1ltaEVpL1NLVmR5cnFZL1cwU21OMThubnhCd2dsY1l2TzNnMEQrNDE3V0R6aCtqVWo4anRtdHRmODlHMHQwaEhlZ2phMXVxRjFYbVQyeUcyYVlzdXFYNm9jRm9XUFFHeU0zRjJsYytRaEVTRnFadzQ4Szc4VGtIQVkwNnBoMEZvbFRyOUY3ZUZZUkJaSTdVZExoWHl1OHNhd0dDa3hhMitnN3NlTkdSSlJjMUdEeEhZSXFaYTc5aDJWN1ZsNUxSSzcvdzNZTWN2NmRudlZLTVN5MVFENHI4eXJLelNZZWh6L29jZ2hKblIzakZwV2Y5YzkrY1ZhWUV4VGZlNnc4dkFncE40ZnlXcUkzY1djdGdJWUY1aG1sYTdETmdqNGE3TFFpOVBGSzA2aDVyNWxCeXhoVlRQSW5SUUR1MW9lOGZieWhpekMwek0xT1ArT3Q0RmQvNGx6RldBN2M3bGpiWnkyZ0ZicFh3bitteG1vY2tJM3haTWVzMTVmQTVFd3NpZ1R3RThmR01wUi9NVjNpdnhTemFSeXc1QUlhdlNsa01GVkhMMzZJaTVhRTZlbDVXUGdtTjdxVndYR2xBRjBOanptdEVFL3lTeGVVMmhnZ3RzZGhuZVkvdmYwd3BOQ2tZaGtMTkhtakdRclFwV2crdUVhSDZtL09oQ1ZKQVAyblRHeEZVNlRRT3Yxbi9raFJ4eHRpMUJTbTZSeGNFVDF0UDdnYm9OY3Z6dzM5a2tVZElaM3ZaSFdRbCsvaSs1NCtJRGdNNmh3UGdLWUVMUUpxSjl6QXo3TDByWHpoT0paMVdSeTE0QXZ6K0JUWGk3VzN4ditySWR5RW9HdDhMY1JyRmRtaVAvR1BWTndXWHc0V2tjNEtZWllRTnFrSGZ6Tk9DM1pZVnc3T1lnRjhQZjh0QUhmZGZudkcxa3JqUUJKeXBZMGRldVFYRjRFYS84NGVheUVTRHA0dFRCK0h0QlFQa3F2SjVqSnhYMXZIR3FTeFY2UE9SeUxYMjdBcVVlbElRMkEzK3FqTTRLa2ZlZFVlNU1mWXREa3hrTUtVQ09oZUt3UVNLa1pEdW1zYll2ZlpVTFlLTEFPc3g4cEVFNlFmQ3pGS09YTXR0VmZZOWs4VXZiM0d3YTdyaUtTN1RQWW95NE9nTzFxdWFHdE9nTkZFYUZmSjJ1Rmx4Ny9wMy9iTk9TZTlyd1o1RFRzSHA4R1M0T0ZxdVhxRmxnS3RKZm5uVTd4M3ZMOFBUV2ViVXFJdkEyZUhyRGZnYmplWjV1K0tLaU94RnR3SWRDNGxscVQrYlJ0aThzTzZsN1lXakU4clppTVZBOUdSR3BHS2tGTkI3SWIyL3J5TUwwZVBxS0E5bWtYYTE4ZXZQbC9aVU9mVlp3OC9yYlRibGZSWnhDZzl4UG9ZTXh5MVVXczRsOVhKanU1cDJoc0loeHM0OWZrdzk3SjlOaWRTZVJsNG9reGdrSENMdHNIMEFoMEJWMW1pNVRNWXhiUXhUUG14REhFY1VsamIwV1RaczF0c21hYmNaQnlPZHhTZmZCQi9ndjFmcmRjRXBnZGc5S0RPSjNCK0JnZ29jTEcxNThFbjVHV0lKaU1IZ2NsdXNUeU1LYWFwTDBmRVk0WnZhTnhJMWdUU081diszWFdRTXBya0xMakIzbjc1dUFBc2c3T1RiOUVzWXFIbnQ4V0ttcXBPWkw0c2lDdnJnSEJqWjNoc09WR0x0ZEZWQitPbFJQcU45YWdYbjU5NGZzd3BPMjRGVkR0MEJPaGhmNSttVlJKaVI1ekx3RS9aUlRyZ1BGUUMxdVg1YWRoU3hSQllob3RmOWs5OVNaeEFhZE9PTUZLTk1rRFZpMHVYNWd1NVhvZmw0QVRENzcwenJXMGQzQWUzUnd5MVhtSjREb2YzSDZJMndFVWxXZDE5Rnc2VmpobXRIMDQ3a3lyZDNOK3ljeEZuNUxORUEwYlpycEQrcUFoSFNRbW1DbDJzeHJSWGhkWUNXQ1NDc3RiSDNkYTgrVTdTRlY3RUhqNVJNbXN1SHVHdlhINUFKOWQ0eHlQUXgyaEMrd0pyMllDbG51RmFnc0pWc1F4dkJEa08ySzNLK3B2MzlvSk4rdzN5NllXdTN6aVVOd2VmKzQ1eGl2U2p3dlNocXY3UmpocC9vaFBBQTFDbG0zSDdwZ0dxOW1TOUF3Qmg1cDU5UnRrWXNTbG9Rb3BiSGdKcnlKQnp6SXAxTTlwdW1PbXVXMFRBL1REckwzUHlJUzc0VlN5L0kvQjN4MWFEVlYreXBOSEJVRm40V29Qd21tc3ZDYzNtdTZQaVcxZGV6WlVMY2ljQTZVdTBLNVhnaTh5Nmx2WWkyd2ZhMStqVUkvNVU2ZHpOYk1lblZsM01lcGl0aWUxS3RmMnZ5NFZ0eEwyaUxmNzNpRUtzNTNGRVFVSVlzVkk4NXZWMWFKQjlJVzd4cmREWG14T09hWVpIbGR2TWRBalhmdVFJeUZ3Q1JLeVp2Zmw2Qk5YUjdhdFZ6cm0wQUxpb1RmQ2FvYUdoRmhLZG9kU0VIQk14RnBJS0hOOVUvbERVNGFjak9RUnhCVm5qNjJTWnQxZXJ0ZXErTFhYTVgwcDFxMy9od3RKR0tmQjE1NUFXMmU0VXA1N3dqdzJ5cTlmbkNEdE8xRVhGQjJST1BVWmFOaU41S1I3d1Z5dStjeUdUak1RemlEMmtkYzQ5QUNrMmlOWlJvRFl2anBRQ2xLYW5OR2Y4bUpjZ1lLMTd2NFdEZDVPQ1BQMHZrUDFBZ1p2b0VPaFZ4bE1MWFZPcldJMkxZMDh0NHBpa1hSZVlnUTFvS0ZUY3VnSW9kc3BkZUdtakFmdmdGRDJ2dSsyNFF0TVBCZytCcTVWWC9IYW0zMzJYR0ZFbU1ycnFiajFJLzhORUxMWk5sNklqNFhkR1lYa0RsaE11S2x1U2ZjM0pFWGtyZ3lHL0R6R0srTy90QjZNQjB0Mm9GUVIzaXZjeHJmWUZXNW5UNmgvSHFaaVdDT2xYdzFtNExkbTArRjlaakRtOE9IWVBBVENLT29UZ29uRFhOeDJsVUxCWTZtSUhnb1RRUGJ4bmlpaXd1UDVmazhhQnNKZFhzSTVkUytlZ2VCSWhFZ01YV0t4bzh6SXhINFdnL0dvSkxCS0NDbTlGRG92eExIclZZWXAraTI1QUxTbUt4R0YxUktBTnk2alBGc0lNdzBDQUVmMklCZ3VXZHFYVlBBcW1SdXVWV2xmYlNRSjA4YjRhdTFrY21YOGV0V0VtdzN6RktpWW1VSkt6Q3ZPcHRvcjhKM29Qa0U2aW0zYzRGMWRsOGgwZ2c2QkVwaEhmaVpjdG1PK0ovb3NxSW01SlVaRnhrWDZoRFgxb0l2VVZObndFNFpkSkdoMWF1bmdQMHBoZXIrbEFnWmp0bFEwWkFIdW1qNW9XTURHaDY3dnBybVN5MnVYVkZtLzFTRDdtQzFxaVNnTC8za0ttUG5aTTlwTnZmaWUzSWJYZUNyV3RwMVN5Y0huMmQyNmRjWlJjWGtIdHd1c3BxcGtkUnYybkcxakdseU9CS25YS0xVNDdoN1NOOWtFVmpFODc1S2ZMNFJkVXhGdmx6dm5MS3N2eWJBTC8wR0ZCT095ZXEvcW5GWXVsaGl1cEV1SEhhM0ladFNFNGd2dUVyL2JDVFJKTkx6Uk5MN3ZFVStUSHAxYjJiT05aOGJaeUcvU3puQXdEZFhycG5pQmFXaitnTUlVRkEwS2U2dkxGaHFYV2lXU2hGclZYaEtsRkdsakI4azVvekhCSS8yYS9wQWFaQ2g1S0NCcGI2M0VycnhuRHZHTDFndTBqVHl6RnFaVkJXOVNzYnROVUlQNXpmMlBMamtGWG9hcjR5QnB1WTNsYzlsaGE5cEdvdTVJdmxKaU10UWFZNjc2bHhWVVZhUllna0Zwai9zRjZuZ1c4b3B3UWhZenpwVm43S2YwWDQxMFhGNjBPazR0VmJ3SGxRWVdEc2NzVlF6Q1NvazdHczlQM0sxNUpzNVB6MkRpMXgzMVcyYWpmMGxwZFhpbFQ1TC9YZmdsN2pBVytZakpNNGRhVGl1NHIvRDZScmNTbVlJaXRGcjlZcXhtblgvVmFaVFpyM2JIRzZrTFJ4cnlsenNUYXRhc0FhNFd3NnBHSnpaQllUOVFTMXVwU01jaXNDbXdaQVlGZTArS2sxa2RmZmNlTmVteU85QnFYbWxtOGJBTXo1aHRPNnB3bFh0NEhaSFk5d1NKOG9XZTI0WmVkUllTOG9jdTBHUmFXVStnRndhT0EwTkFZSEpab0ZmRFZoaDZuKzdKeUg2SDZMQlludmsxdlR0TFFmdDJLUGFPVmYwbnF2VGlUYzUvNHpkbWpheWZaQ0pEU3NLVWlaV0cxRC9VWVVPK3dzZTFrMm9KNjVCU09kY1dnTzVwMDJuclB1cW5FcCt1ZCtZVElqdW0yTHhjUFJaZVRteFJFMTJIM2RkaHpDYldXNVFsVnMzZ0ZCeHRrWEcxVWpHRkZndnIvOU12a3pIaWdGT3VmbFg0b2VTQVMyU0tvT29CU0VEL0VlbEwrcUtuRGtHOW1xbnY2MTRsakEwT3J5S0NTSU43TWhIYUdWRWh4UWxsSjR3V0lyRkZxalBjQUk0MXpycFlQUzZuSU1jbGx2VEd6RVhsUWRQbGhGOWFFWEd3UEFONEpDMHhxN0haVlBPY1h5YWNrd1RqdGpqWjBmblcwUUljam1IRTZxckJYcmJzcFAxSEwrQ3BKa2wyb2dha2Jlcis4bkhhS3pPNndSWTgwMHhCRlFuaTFlNyttMUVmem40Z3VCOEMrK3pSbjFqcFFlV204ZDM2YkZnRFIyWXBmYjJzMEltVHFzR2gxWW80dTFwRm5UMGJpNUNEWW9CQ3NmWHJVY0lpNTU5Wm1yUW50YXlzMCtwMitOU055dVBpWjNjcUdSbUhzcnBlRUJmd0ZqRTJuTGV6U2FNbVd2d2phM09KbThkaXJRSyt6SzJnMkxxTDZ4Y2Q5NzRCOWd0QWZXT1EwRlFud2dXaTBxZjIzalF6WjRNT2l3NVZabnZwU2V0a01seDZtWVVlYXYwamFPbzFXdjhGTmlmY2JpRFVGWUd6L2R0T0VJQkpiMktxRGNJQW4wU2hzM2dVams1WEFDY3MxZ0N5RW00VkhFdEttT0dPVERpK3BINUdTT1lpbGlObHhTNHBqWkw1dWJHYnRQTXNhVXZxT0tLNTJOS284WFhxS3B3Vm5WbE03MG9RcFpnM0VBYWljd0VFUFZFK0Rvc3RZU1J5TEFPT2lObnZMZmd4OC93TjduY0pwUkR3VXpGNllhTmlWTlJnMmpnQXRaTGkvN2swbmF1SGZmWENqYnRSRUNVdUZoWUlrYXpCNjlxWkdUdlhhZllUTG1sbjcrV0UrZjNkWjdOdzNxemY3Y3RZcUIwQktObWlmbURJSStZVEN5eWw4U1hWa0x3dlZSOW9Ud0R6SThISWIwV2hwaHJhZzdJR1ZXUndmZHdrVDloU0Jwejg3NHF5QVZOSUJDTlNNY2xKaC95N2ZjWXZhQytxTGZ3VDdkTlBrY1RCTWp1bEttc3kzNVN2Z0MwUEZEL2FwcmN3NTlUUnZJUTZWOW43cXU3UnpGVmR3eGVDRFlWK3o2NndGdEs5elE3QWNPNjAwTFJlSzN2UWM5YUkzU3lNblI3ZmtBUmZLc0hKUWhuSklHMDQ5WWdublc3NUNtVk9QYm5QY1kzK0hUYm8xYnkzVzZYNDZBSnZ2U1MzMEZCRWZCUzVQVnc5MGVKbkpsa1NDeEhQWWxhVHVOZnFPT1lxT2x0a1hjaVRzVGFkeUkzbEVZOEFKUzZ0VllDcnBScUM0eUtlUUxmYVU3MUdkS0h1dEVaNVU2dXNueXJ3dU80R2JuelFldTExYzM3UTVGeFhRSDhOVDluRFNWai9pdVBmZVk3T1JKRVRFNjUzQWpvQWV5OG12eVFNSVhZNUtwYjQwdXNYVldkNDF4Zi9reHpjYU00Qmhoc1JybG5wUGdJeHIwLzYrZkFoMkdsbkRLbTY0My9QdnRpeVJQSWVrTC84VU5oSEZvZExwK1FEcWloelV2azZUK0JpVDdQYlNqSzVsTjBOdEJkR3NnRnFyM2J2YnE3VWVjS3cwb3hrZzBzTTRJV3E4S3ZSenNlUUs3blBIK2hucUtJOTZPZW8wTDRrUnliUFRNVjh3eFJucHNrejJoUGNsMWU5ZmtsUC9qN2ZQNitlYWFZMkJxNW4ySXJxOWNJa0QwYmZNZEtyQWFvVG82VzJsSlhwV00xN3hHYXR3aU9RR2VIbmJTUTVCNzFqUVdMTUQ3aUpiZ2FNQlZ5OExzMG5nSFVTOCtuUGp0ektRUUFpYmVZZnlwNEdQakdBajY0Z3NCRnZqcithWXFKZ2I0Y0hEUEhtNUpMNC8xTWczUjBIbTZ3SERoTlVXOVlRNlZiUXlyZitER29oSWlwTnFONVlmV25HMmhReGFqaWVQOFIzZHJpaDdNL1dXNUtIQkFtajl1eGQwanBWb2ZmT0ErTjNmRG5ydEIyMm9XS0JUUGU1NStyaXdvS2MzOC9UWTdxeDdoS1hpbDZEQnJTeUN0bkhXVEdYNnZPeTRrQzlFU0x0N1MrR2lSNFJBbStMdjBWNmxpT2pBaStSUU9sVWpIbWtIYkFpcytBNDJyTTFmVHBDQXBLTTd0ckdDdmhTSkR1SXlDWjA3dmptZFpJQi9IRXVBUjRGb3liRzJOK2dWSUtJSDZrVnNtOFhQc0pLbGRYcXR5enVUaW11ZDlnWmVpa2t3bllRVWt4NkV5UXNkTEpBYUtwMUNIcS9FYlRiMnBCWkREZ0xnYzF1Z2s2R0FWcnY3SVpHK3NkdUdqMDI2OHYvenJWeDlCc0ZLZUs4TWMraDlyN3IwNFlrd1V6UnZUU0JoMloyb2t6UENTdEVlcFdQZjNlaDcrOURGWUMwbzQxQS9mNTBXSlU5RHQzYWkvYkVkRDhIbDlJVDNQZnQwU3dNNFgxVGhjVmZNbDZUVythOHMyTnhLMTVjSkllVG5Gcmlhd0VGOXBCNkxNZjVvcTFDaHVLMEFXc215blExUXZ6MTdwQWZtQmVnQkl5QXBveXRNUDFDekRUZE1XampJVUs0TFRqUkNQaDkvT3NSMmg3cVQ1YkZtSUpWWUN4TFVzenZBcVlLRTdlQWZ1SHN0OFJ6c3pBdklNa2RuazFqU1hGeG9Sbmx3Vk92TU9jM2JwQk4yOVU0UVYrWEVmUW1ERHZXS2tJQ1p0blFqUDRrZUg2TitKejFEWG5ZNzEvcGFlUGk0alBWOXRob3dzVEdsZVl3UXpyZ3BXSy9DdzZwMVU2T1IwQmkvcG5aTDV1TG9UWHJpcjJTTW9raFBJODVTRWFHWkdpcWJXVUthamZJMkNHNVVBMFpZSDZ6ekZzWE5qbElXVVh6dDlrR1BZSWdQTkdjbHZ3OFQrLzYyTUh5YlNUY0hlTEY3RDEzQmxvZjlPSjZlM3VpZVF0SEFkQVJtZWhPMFRJNUI5eCs5UEMyRTBoVUxydEo1U0NKTk4xYW1YV3E2SU9tYW1mVEZDbXowVFZiSTh1bVAyaU1vdjJXd0dlODdUMkF6WUxrMDdNSDRBeEU0dzRWK3hab1NHOVppODEyV2VDTlJSRHBmVjRZenlwR0szanZ6MXBxZkhDY1REVk8zSFlpaFRDMVhTMThtTEMwcVFQVjV3WFNJZ01XU3M3Z0xvWTVBT3BVK3FSOXJZMzhwQmtNZy9qY1dpY3hjQ1dRYmhXT3REcVpHMFFhWTdiTlFZa2Y1VlVCWXhocHBrTE9BWHljeFpLLzZ3YXpoc0I0RThITFdtZ1BiN3hmYnBXL0s4ZHRIaHhweXZ6eXZHOElmTzZsYWVDUnJ6dFAxMHVwSjdadUo0NCtBL0VoVDdhK2REUUJhcmxRbHVuSU43QloxdUZkcmJtb3g0NFcwcmFDMk5wRlM4blRWZjBseW4waThVVVFrY3h6L0Q1ajZ0N0Z6STNOazQzMDNXUGNKMVNzZTdqMERlU1BWSkJuOVZ4NjIzRk5yeWZCVjhJcC9GWWxYaDBrRitKbVNqSmRNT003VlF5MHl1TjlOU0dvbnVXblhJRVdoRXpiNFBZTDJEZ3c3Y0hiUERYUDk5SFpkVzVmSFRTYUE5QVlSTHU4a2NRWEFhL0cvZ3JDY09oY1B6WjlHc1M3d1FHdHQ2YmlWdTgzQjZ0QlFmTVFtQzlycW1qQWpqK0h2TDZRcTMrTXlIT1ZlODRyYXFQbnJBa1hvTXhOS0w3ZFBYZHBPK2ZIZ2pSVWRQTi8vSG9wR2Y1dENNTVE5SXpCb1FpTlNLRHgxa0EreHR5dlVvNXkvRjZwUUU4M09MZmZLdDN1SXNYUnZvTjBUbm84bmw2ZHBFblZEYnF4eWxDdENDLzdMdEZuZzVSUGo3YjM0cXZHZCtyejJMTXBZRjNINHhZL2p5dVV2eVRuMzdIdFBFcHVDNGhucVZCTVFEelQzZzUyN2NuZUlFdGFMQ3p4bmF3UE93OWlTUzFaY2RxdjY1OWpibzYzcHZkVjhtSkJNaUFYYjhKV1FCSmduNWhoWlNtUkxTS0lNdS9jTG8yV0RDU29hTGhMaHRDMWk3UGtIekhWUWF3VG1XeStOeWp4Q3RnRlFicHdTU1k2ZktWUTVpalB5ZDhOV0h4VHNPb3padFVJb2psMjBPb2tCelJhN0s2Q1l6Q2FTLzlqcXpPZVdlNkZUYWtOV002V0dzVVF3NE04ZjBFMmNJMVZtZ1J3OHZqa3FnVnpoN1lrYjROV1ZlTWpqODFqOFl3cU9tOE15N2drZ2t5N3VUckRrK3VweklPek42WlAreUtxT0dGSHdwMUFuMFFEdS9WZHdXcFhDR0g3QkhvSjlySzZGZmMxdk43cDY1MXVhQ3UvcE9rNkcwb05KVldlelhDenB1aElUZWl6NTVGeFNDcHF6L0xVNTM4MkJPT2h0Z1l5Q2VlYkRyeUpHZVduc1JNUmlHMC91WjZ3bkNSUUhHMC82RVNxYWQrMzBTamRBUldzYkVSNG91WUt4VkRLeUZ4MFhBalVLV0R4TFNDbXVtR3k1K0lkUnBGbytyS0I5TE41ejZJT2ZJYlZ2Rzc3d2JsVmtWblI3WVBwUUV6dkNBbUVHQWdEc3hTcTVYVlNJbE1XWFlLSDNSNnl1cE1Fb2lKTVJHcGRJcnlqZnJYNVlHR2N6ZVI1MWl6RjZzUjhkV1pUVlVDL0paOGRoVTBrZWVrRWwvMHdad2VXdWtxeFpIMEhjK3lZWTNieVJFc01GVDBMSllIRk02TTIwTzcxL3o3Q0hQUHFVZmVPd2RBVm5RRUg3eE56bjl3NW03eHNmcEtNNkpIb2N4MXZQZVNFNWZ5TE4yTVNKYnpreHJtRW5nT3o3R2R6SkhYREtWYklLdVVLOUdSRU9sYmExcExIOWg4V2hQK3IwM2JCUXBWNWxOZWcrN2s4Z3hPaHo4bDNNM2dxTmxBaDdQNkFSTnhJZlhaSGkzNUFtL2FsRy85Tlg0TzFYMExVTFhLK2tVN3M2SFVmR2RNRXRhY2lIL0tDZ0NlN0lGanRrUkdqazFwYVFSTk85WkNqNm9xMHJiWWJYQnNLbVczRlh6SFRpUjEzaVVCR0cxS1ltNTJtVkN1Zmk4T3l2c0NlQUZhbG9LSkZHbGFsbkdWcCtDc3J4Mm1ZUmcrN3BIQ2x6dDF4VS8rV2l5RUoxdjlmUVdrNXhBUzRJdGZFbXBoelpKWVhzS1B0ckVsNmtMYzcwY1gveVVFT05peXBoYVFDQXFqLzErWXV1UkQzdW5taURtQ3FLWkJTWWkvQ0NLeDRwczhyV3RrZ2JaSlRLSjNjdkcrVjZMdEgyenFFcHVZdVEyT3BKOXF1c2k5b2ticDFXQ0hKMi9NbmNzMlNqM1NReHJoV1NjNm1CeFlQdHp2RVpVaWdvcG5wQ1BUaU9yZ3pLZlVYMmgyU2hCMnRiWllnangza3RrTWN0NWR5dHR3UlZjUU55aDNjMFV2U0oycDRKamVLdFZHQk91elZZUVZlcmJUQT09PC9DaXBoZXJWYWx1ZT4NCiAgICAgICAgICAgIDwvQ2lwaGVyRGF0YT4NCiAgICAgICAgPC9FbmNyeXB0ZWREYXRhPg0KICAgIDwvc29hcGVudjpCb2R5Pg0KPC9zb2FwZW52OkVudmVsb3BlPg==&quot;/&gt;
+            &lt;L7p:ContentType stringValue=&quot;text/xml; charset=utf-8&quot;/&gt;
+            &lt;L7p:DataType variableDataType=&quot;message&quot;/&gt;
+            &lt;L7p:VariableToSet stringValue=&quot;testdata&quot;/&gt;
+        &lt;/L7p:SetVariable&gt;
+        &lt;L7p:HttpRoutingAssertion&gt;
+            &lt;L7p:ProtectedServiceUrl stringValue=&quot;http://localhost:8080/decryption&quot;/&gt;
+            &lt;L7p:ProxyPassword stringValueNull=&quot;null&quot;/&gt;
+            &lt;L7p:ProxyUsername stringValueNull=&quot;null&quot;/&gt;
+            &lt;L7p:RequestHeaderRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+                &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;&gt;
+                    &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                        &lt;L7p:Name stringValue=&quot;Cookie&quot;/&gt;
+                    &lt;/L7p:item&gt;
+                    &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                        &lt;L7p:Name stringValue=&quot;SOAPAction&quot;/&gt;
+                    &lt;/L7p:item&gt;
+                &lt;/L7p:Rules&gt;
+            &lt;/L7p:RequestHeaderRules&gt;
+            &lt;L7p:RequestMsgSrc stringValue=&quot;testdata&quot;/&gt;
+            &lt;L7p:RequestParamRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+                &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;/&gt;
+            &lt;/L7p:RequestParamRules&gt;
+            &lt;L7p:ResponseHeaderRules httpPassthroughRuleSet=&quot;included&quot;&gt;
+                &lt;L7p:ForwardAll booleanValue=&quot;true&quot;/&gt;
+                &lt;L7p:Rules httpPassthroughRules=&quot;included&quot;&gt;
+                    &lt;L7p:item httpPassthroughRule=&quot;included&quot;&gt;
+                        &lt;L7p:Name stringValue=&quot;Set-Cookie&quot;/&gt;
+                    &lt;/L7p:item&gt;
+                &lt;/L7p:Rules&gt;
+            &lt;/L7p:ResponseHeaderRules&gt;
+            &lt;L7p:SamlAssertionVersion intValue=&quot;2&quot;/&gt;
+        &lt;/L7p:HttpRoutingAssertion&gt;
+    &lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                                </l7:ResourceSet>
+                            </l7:Resources>
+                        </l7:Service>
+                    </l7:Resource>
+                </l7:Item>
+                <l7:Item>
+                    <l7:Name>decryption</l7:Name>
+                    <l7:Id>a8193aada81db1c65e0b5d24fcb3e572</l7:Id>
+                    <l7:Type>SERVICE</l7:Type>
+                    <l7:TimeStamp>2019-05-14T17:11:47.471-07:00</l7:TimeStamp>
+                    <l7:Link rel="self" uri="http://dhcp-10-175-247-219.lvn.broadcom.net:8080/restman/1.0/services/a8193aada81db1c65e0b5d24fcb3e572"/>
+                    <l7:Resource>
+                        <l7:Service id="a8193aada81db1c65e0b5d24fcb3e572" version="4">
+                            <l7:ServiceDetail folderId="a8193aada81db1c65e0b5d24fcb3fc96" id="a8193aada81db1c65e0b5d24fcb3e572" version="4">
+                                <l7:Name>decryption</l7:Name>
+                                <l7:Enabled>true</l7:Enabled>
+                                <l7:ServiceMappings>
+                                    <l7:HttpMapping>
+                                        <l7:UrlPattern>/decryption</l7:UrlPattern>
+                                        <l7:Verbs>
+                                            <l7:Verb>GET</l7:Verb>
+                                            <l7:Verb>POST</l7:Verb>
+                                            <l7:Verb>PUT</l7:Verb>
+                                            <l7:Verb>DELETE</l7:Verb>
+                                        </l7:Verbs>
+                                    </l7:HttpMapping>
+                                </l7:ServiceMappings>
+                                <l7:Properties>
+                                    <l7:Property key="internal">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="policyRevision">
+                                        <l7:LongValue>2</l7:LongValue>
+                                    </l7:Property>
+                                    <l7:Property key="soap">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="tracingEnabled">
+                                        <l7:BooleanValue>false</l7:BooleanValue>
+                                    </l7:Property>
+                                    <l7:Property key="wssProcessingEnabled">
+                                        <l7:BooleanValue>true</l7:BooleanValue>
+                                    </l7:Property>
+                                </l7:Properties>
+                            </l7:ServiceDetail>
+                            <l7:Resources>
+                                <l7:ResourceSet tag="policy">
+                                    <l7:Resource type="policy" version="2">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;wsp:Policy xmlns:L7p=&quot;http://www.layer7tech.com/ws/policy&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2002/12/policy&quot;&gt;
+                &lt;wsp:All wsp:Usage=&quot;Required&quot;&gt;
+                    &lt;L7p:AuditAssertion&gt;
+                        &lt;L7p:SaveRequest booleanValue=&quot;true&quot;/&gt;
+                        &lt;L7p:SaveResponse booleanValue=&quot;true&quot;/&gt;
+                    &lt;/L7p:AuditAssertion&gt;
+                    &lt;L7p:FaultLevel&gt;
+                        &lt;L7p:LevelInfo soapFaultLevel=&quot;included&quot;&gt;
+                            &lt;L7p:Level intValue=&quot;4&quot;/&gt;
+                        &lt;/L7p:LevelInfo&gt;
+                    &lt;/L7p:FaultLevel&gt;
+                    &lt;L7p:EchoRoutingAssertion/&gt;
+                &lt;/wsp:All&gt;
+            &lt;/wsp:Policy&gt;
+            </l7:Resource>
+                                </l7:ResourceSet>
+                            </l7:Resources>
+                        </l7:Service>
+                    </l7:Resource>
+                </l7:Item>
+                <l7:Item>
+                    <l7:Name>test_encryption</l7:Name>
+                    <l7:Id>00000000000000000000000000000002:test_encryption</l7:Id>
+                    <l7:Type>SSG_KEY_ENTRY</l7:Type>
+                    <l7:TimeStamp>2019-05-15T13:14:14.564-07:00</l7:TimeStamp>
+                    <l7:Resource>
+                        <l7:PrivateKey alias="test_encryption" keystoreId="00000000000000000000000000000002" id="00000000000000000000000000000002:test_encryption">
+                            <l7:CertificateChain>
+                                <l7:CertificateData>
+                                    <l7:IssuerName>CN%3Dtest_encryption</l7:IssuerName>
+                                    <l7:SerialNumber>12558431426966954476</l7:SerialNumber>
+                                    <l7:SubjectName>CN%3Dtest_encryption</l7:SubjectName>
+                                    <l7:Encoded>MIIC+TCCAeGgAwIBAgIJAK5Igthsd6HsMA0GCSqGSIb3DQEBDAUAMBoxGDAWBgNVBAMMD3Rlc3RfZW5jcnlwdGlvbjAeFw0xOTA1MTUxNjQ1NTlaFw00NjA5MjkxNjQ1NTlaMBoxGDAWBgNVBAMMD3Rlc3RfZW5jcnlwdGlvbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALEgHeSadWENsgzuX5qVMPCa2AaanpTrTUzSNf3RvT8h6ABnOAH7LRMhZhhgTe1ZKsXCMGHjLne8JS1v7QFQl1oRSBsmUL4YI0wWdor5jLLwcvshfgPpjcCaIkYqeMVc0Xi9vQGGtQmhJyWO4+5gnT7GG1d2wZ5LF5XdZGsYFj/hr7Ih/TAaZfcbPRMAPssvj9YjuxcugItfsGCC9MUpYruHF25tViDehGUVaI3SkzgcGV+XL7vzsXW58Yw1HIUaEEcqW2a6cEVSOIXTlrdWwDx+/qbABjCv6GBtbqLO+sPWus+HiqgrLAbEpL9+K/DRsPo7aNPDxpKgNcaTyyu8P8MCAwEAAaNCMEAwHQYDVR0OBBYEFGp5HOFs98p3i4ba2cNvG/8CuLOmMB8GA1UdIwQYMBaAFGp5HOFs98p3i4ba2cNvG/8CuLOmMA0GCSqGSIb3DQEBDAUAA4IBAQBOYm46IxdhUaT9jhbWElHC+nP9tGmX2PBdWATlHOWgLfLA+QC/9vPW1BHIDM0eUusZRki1SQO/eI8WTC9vtmjqukYpfBFwtom9jIP9CbyizqgJ1gNBmTMI3MHpI8XEsLOZ8J2rSRPKsiZIHmxOqO9BATpZmAu5qTAadSTn34WETxJmPQ1KwA28T19MXScVus1kSWBx4Uqgmg5qkSXTdDkn2wKRcirMH+Q6p85a+ZEq+2rAVyy95MNRn+7xs1x9dTp4vKWvJOjtnA+4Bl4NYGMn+DYrk8Y5P9pBQ0f2WfJDh0Gbhfb10JOGt/J2T41tIVstLp4TUy2cNMhL0/eSD2x+</l7:Encoded>
+                                </l7:CertificateData>
+                            </l7:CertificateChain>
+                            <l7:Properties>
+                                <l7:Property key="keyAlgorithm">
+                                    <l7:StringValue>RSA</l7:StringValue>
+                                </l7:Property>
+                                <l7:Property key="keyData">
+                                    <l7:StringValue bundleKey="$L7C2$1bead,w1+v/izqVfELH9nJaFDBMEJLSI20z1bnTf4BDKMqzIk=$H4UESbo9bwQ6qEDsYrzELXQQTHc0OsCFEHS7pLGoWkoevHBjhCkxna4StWChboA1tbHsX1sNMWfz/uUw7cdyjsM/t0WfslliEx9cmJrm/pMChoiQkZs4vX71eHpthkfI" algorithm="RSA">$L7C2$1,3pKokvEKIYVa3ChhkdwnFmOAAkeNnK/iS5wSanksSZA=$NAhrDNN89LcaTI5Ag39VWxmNDMvXqMsJizIhjRR4e8GZJq6c44OwAIRh13RSEf463x6/wxh0u7mX+zKoC866omB4zYBbooO9jLRaDcTG1IOhsRZz3CbbqYnG0twuwZLRnnud+ZwbwH5TNsVGVwI01VmSLa2hRJYT+BVOrOgDN1u+GLndKAOQ3RP8dC+QvkUBiMivesTA7Ti5ZMD57tm1WMLNiARDGD3/fIgf7LP5Cr1q89ChUzyFsJPgGtKSD649a4UnyxysS9sFjPXzB5wA5JpuXQpHCwFmfx/TjexrTqn7HWoialySP2rWHrVqht1ke/q1T6IAbLRMOd3tQvu7qdA73sItiw7ShyX7ll2FAyOScSVOr6csFlh4lABntrnquVI5Be4yhQtkEskSEUvCKRlz65UIEus8qIyXTrBqJI8TtnkALyFNdWWbFfZqNqeJM7/pFTfEGPHZVwnEw3fEHj620YvVdD3DBwpvWSGMhXA2fJMs3wPd5+L59G55J/Uz3BFOEs224SrD/rzwtd4uKJ4qnCE/Kz8IzOmG4G1D9YYZAIws+J2hYDtuRG4d+d34u/7t5j5BVaFepkLy0gZlID9wH06OLeeRh4dl9Aca8CWnbyNnu4KSa4re8FQrRhbpsi7k25aTfNO3E+YxTbiAn32E8fjNF0Ebxx81wTlVNx351HQiNYKz4Pb/j/81JgIqga0z9WImIQidljit6m8Zq0Dk74fppeIYDCpEyOjWC8Tk656mIsRVwSVML1gXzNgvPq3OwAdflSP6bLq9FajMmRXD+XNGeYtLh7SlmYvGkvdlAdhgVDxnuAL+2KWAcRHsUZ84jYVgr3Uj2uZ+WhCKz0MKwgu7o/mKXTdk4c53wPac+l9G4HcbzcpZ8rUsUnpP+AmptNraMRR3a2T2pw3+HWCzKAjKDB1SXqs44UTejUo1YMJyPQLBUJWeUbZeQytjphpmWKebe8BJEu3K8NMTMjR2PZADTwjDjPGLpVKxbLRLDRGJqo+6xsdp+EAsNuPR/zlEg0lF2rbzijW5bvsmM/NWfM3zT4eqGPIBsnRNksIMkN0N7vPoTdxLAvJkbFQZZpcPho1TjUTHNBO3+cNFdQPI7arRG/1UsYV3ArLJkKmfOyMtENMcxwXEQ20ChQhDwbvt282e9tJ+iQmtJ3O1CNtWujS6JNvxTKDNCf4lx+m1Ou1bKpfm1dkWmNyORfma7TtwAGOdG7oJs7SjXTdi9YJ0K1q2XB+b7Kyddy2RCcAud1hqyggUIfmuc2aoUZsC1ddEuPta106nZuFYYNAczSVYDgPBjYk9V1UoED6EDwxP/DZsffLIVG0jpcer1+F/1VgIPm8dSvt6iMYNIvIQBcGE34s1vHtOU4wWV0lMPE4cYG6yaKzOwoGIFAKN+OrVJZ1t2Ni8XwIx637YUf2EZIg30WKjINQ/qus6P+SKtJF5rTnnLza6cWO4OG3TLcnTl3aZVCcMjKJ1eW2ORP9E4w7gdmE/kv2RlRXaibfgu36n15TiNRpPrBuy8HOuCiPk5NNiZ7XzeAS50Xr102GPCDePq55QzlxyVbUkfwgM8TduBIz68XI1U+BNXhKnvVv/DmqjGBNA+P2PQxvqXneRyXkC+gWsr0JbSH8beUOwPa1q7lRD20XikmZXDayz+dWOaxIn59WUVQ6jfQOGVQLpgQVRNhB53qLE70G/OKtpN0k=</l7:StringValue>
+                                </l7:Property>
+                            </l7:Properties>
+                        </l7:PrivateKey>
+                    </l7:Resource>
+                </l7:Item>
+            </l7:References>
+            <l7:Mappings>
+                <l7:Mapping action="NewOrExisting" srcId="00000000000000000000000000000002:test_encryption" srcUri="http://localhost:8080/restman/1.0/privateKeys/00000000000000000000000000000002:test_encryption" type="SSG_KEY_ENTRY"/>
+                <l7:Mapping action="NewOrExisting" srcId="a8193aada81db1c65e0b5d24fcb3fc96" srcUri="http://localhost:8080/restman/1.0/folders/a8193aada81db1c65e0b5d24fcb3fc96" type="FOLDER">
+                </l7:Mapping>
+                <l7:Mapping action="NewOrExisting" srcId="a8193aada81db1c65e0b5d24fcb3e51f" srcUri="http://localhost:8080/restman/1.0/services/a8193aada81db1c65e0b5d24fcb3e51f" type="SERVICE"/>
+                <l7:Mapping action="NewOrExisting" srcId="a8193aada81db1c65e0b5d24fcb3e572" srcUri="http://localhost:8080/restman/1.0/services/a8193aada81db1c65e0b5d24fcb3e572" type="SERVICE"/>
+            </l7:Mappings>
+        </l7:Bundle>
