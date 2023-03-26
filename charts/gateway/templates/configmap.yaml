@@ -180,7 +180,6 @@ data:
         done
     }
     echo "before copying the mq files... "
-    copy "bundles" ".bundle" $BUNDLE_DIR $TARGET_BUNDLE_DIR
     copy "mq" ".jar" $MQ_DIR $TARGET_MQ_DIR
     copy "custom assertions" ".jar" $CUSTOM_ASSERTIONS_DIR $TARGET_CUSTOM_ASSERTIONS_DIR
     copy "modular assertions" ".aar" $MODULAR_ASSERTIONS_DIR $TARGET_MODULAR_ASSERTIONS_DIR
