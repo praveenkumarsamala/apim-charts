@@ -9,10 +9,3 @@ metadata:
     chart: {{ template "gateway.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-data:
-  {{- range $path, $_ :=  .Files.Glob  .Values.bundle.path }}
-  {{ $path | replace "/" "-" }}: |-
-  {{ base $path }}: |-
-{{ tpl ($this.Files.Get $path) $this | indent 4 }}
-  {{- end }}
-{{ end }}
