@@ -11,3 +11,4 @@ metadata:
     heritage: {{ .Release.Service }}
 data:
   {{ (.Files.Glob "mq/*").AsConfig | indent 2 }}
+  {{ end }} 
