@@ -10,6 +10,10 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 data:
-  mqjar: |-
+  fscontext: |-
          {{ .Files.Get "mq/fscontext.jar" | b64enc }}
+  proton-j-0.22.0: |-
+         {{ .Files.Get "mq/proton-j-0.22.0.jar" | b64enc }}
+  qpid-jms-client-0.26.0: |-
+         {{ .Files.Get "mq/qpid-jms-client-0.26.0.jar" | b64enc }}
 {{ end }}
