@@ -378,6 +378,13 @@ spec:
             optional: false
             name: {{ template "gateway.fullname" . }}-bundle-configmap
 {{- end }}
+{{- if .Values.mqjars.enabled }}
+        - name: {{ template "gateway.fullname" . }}-mqjars-configmap
+          configMap:
+            defaultMode: 292
+            optional: false
+            name: {{ template "gateway.fullname" . }}-mqjars-configmap
+{{- end }}
 {{- if .Values.serviceMetrics.enabled }}
         - name: {{ template "gateway.fullname" . }}-service-metrics-configmap
           configMap:
