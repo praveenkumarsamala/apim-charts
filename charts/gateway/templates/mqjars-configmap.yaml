@@ -11,4 +11,5 @@ metadata:
     heritage: {{ .Release.Service }}
 data:
   mqjar: |-
-        {{ .Files.Get "mq/fscontext.jar" | b64enc }}
+         {{ .Files.Get "mq/fscontext.jar" | b64enc }}
+{{ end }}
