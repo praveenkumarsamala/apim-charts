@@ -127,6 +127,10 @@ spec:
             - name: {{ template "gateway.fullname" . }}-bundle-configmap
               mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/bundle/configmap
 {{- end }}
+{{- if .Values.mqjars.enabled }}
+            - name: {{ template "gateway.fullname" . }}-mqjars-configmap
+              mountPath: /opt/SecureSpan/Gateway/runtime/lib/ext
+{{- end }}
 {{- if .Values.management.restman.enabled }}
             - name: {{ template "gateway.fullname" . }}-restman
               mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/services/restman
