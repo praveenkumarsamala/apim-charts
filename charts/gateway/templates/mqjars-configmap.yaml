@@ -10,4 +10,4 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 data:
-  {{ (.Files.Glob "foo/*").AsConfig | indent 2 }}
+  {{ (.Files.Glob "mq/*").AsConfig | indent 2 }}
