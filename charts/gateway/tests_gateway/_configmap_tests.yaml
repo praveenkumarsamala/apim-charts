@@ -1,0 +1,58 @@
+suite: test confimap
+templates:
+  - configmap.yaml
+tests:
+  - it: should have valid kind type and valid LICENSE, HEAP settings
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: ConfigMap
+      - equal:
+          path: data.ACCEPT_LICENSE
+          value: "false"
+      - equal:
+          path: data.SSG_CLUSTER_HOST
+          value: "my.localdomain"
+      - equal:
+          path: data.SSG_JVM_HEAP
+          value: "2g"
+
+  - it: should have jdbc connection with the default url
+    set:
+      database.create: true
+    asserts:
+      - equal:
+          path: data.SSG_DATABASE_JDBC_URL
+          value: jdbc:mysql://RELEASE-NAME-mysql:3306/ssg
+
+  - it: should not have jdbc connection url
+    set:
+      database.create: false
+    asserts:
+      - isNullOrEmpty:
+          path: data.SSG_DATABASE_JDBC_URL
+
+  - it: should have correct hazelcast values incase hazalcast is enabled
+    set:
+      hazelcast.enabled: true
+    asserts:
+      - equal:
+          path: data.EXTRA_JAVA_ARGS
+          value: -Dcom.l7tech.bootstrap.autoTrustSslKey=trustAnchor,TrustedFor.SSL,TrustedFor.SAML_ISSUER -Dcom.l7tech.server.audit.message.saveToInternal=false -Dcom.l7tech.server.audit.admin.saveToInternal=false -Dcom.l7tech.server.audit.system.saveToInternal=false -Dcom.l7tech.server.audit.log.format=json -Djava.util.logging.config.file=/opt/SecureSpan/Gateway/node/default/etc/conf/log-override.properties -Dcom.l7tech.server.pkix.useDefaultTrustAnchors=true -Dcom.l7tech.security.ssl.hostAllowWildcard=true -Dcom.l7tech.server.extension.sharedCounterProvider=externalhazelcast -Dcom.l7tech.server.extension.sharedKeyValueStoreProvider=externalhazelcast -Dcom.l7tech.server.extension.sharedClusterInfoProvider=externalhazelcast
+  
+  - it: should have correct hazelcast values incase hazalcast is not enabled
+    set:
+      hazelcast.enabled: false
+      hazalcast.external: false
+    asserts:
+      - equal:
+          path: data.EXTRA_JAVA_ARGS
+          value: -Dcom.l7tech.bootstrap.autoTrustSslKey=trustAnchor,TrustedFor.SSL,TrustedFor.SAML_ISSUER -Dcom.l7tech.server.audit.message.saveToInternal=false -Dcom.l7tech.server.audit.admin.saveToInternal=false -Dcom.l7tech.server.audit.system.saveToInternal=false -Dcom.l7tech.server.audit.log.format=json -Djava.util.logging.config.file=/opt/SecureSpan/Gateway/node/default/etc/conf/log-override.properties -Dcom.l7tech.server.pkix.useDefaultTrustAnchors=true -Dcom.l7tech.security.ssl.hostAllowWildcard=true
+
+  - it: should have valid service account details if enabled
+    set:
+      management.kubernetes.loadServiceAccountToken: false
+    asserts:
+      - notExists:
+          path: data.002-load-service-account-token

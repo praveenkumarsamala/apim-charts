@@ -1,0 +1,11 @@
+suite: test deployment
+templates:
+  - apim/apim-deployment.yaml
+tests:
+  - it: should pass
+    asserts:
+      - isKind:
+          of: Deployment
+      - equal:
+          path: spec.template.spec.initContainers[0].image
+          value: "caapim/upgrade-verify:5.2.3"
