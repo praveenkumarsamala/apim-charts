@@ -7,7 +7,7 @@ on:
       - develop/gateway
       - develop/portal
 jobs:
-  kubeconform-chart:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
