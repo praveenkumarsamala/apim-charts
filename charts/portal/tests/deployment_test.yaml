@@ -8,4 +8,4 @@ tests:
           of: Deployment
       - equal:
           path: spec.template.spec.initContainers[0].image
-          value: "caapim/upgrade-verify:5.2.3"
+          value: "caapim/upgrade-verify:5.3"
