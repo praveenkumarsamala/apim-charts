@@ -1,0 +1,152 @@
+suite: test deployment
+templates:
+  - deployment.yaml
+tests:
+  - it: should pass
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Deployment
+      - equal:
+          path: spec.replicas
+          value: 1
+
+  - it: should have the updated strategy
+    asserts:
+      - equal:
+          path: spec.strategy.type
+          value: RollingUpdate
+      - equal:
+          path: spec.strategy.rollingUpdate.maxSurge
+          value: 1
+      - equal:
+          path: spec.strategy.rollingUpdate.maxUnavailable
+          value: 0
+
+  - it: should not have node affenity settings
+    asserts:
+      - notExists:
+          path: affinity
+
+  - it: should have valid initcontainer settings when otk and database disabled
+    set:
+      otk.enabled: false
+      database.enabled: false
+    asserts:
+      - isNullOrEmpty:
+          path: spec.template.spec.initContainers
+
+  - it: should have valid container settings
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].name
+          value: gateway
+      - equal:
+          path: spec.template.spec.containers[0].image
+          value: docker.io/caapim/gateway:11.1.00
+      - equal:
+          path: spec.template.spec.containers[0].imagePullPolicy
+          value: IfNotPresent
+
+  - it: should not have any lifecycle hooks
+    asserts:
+      - notExists:
+          path: lifecycleHooks
+
+  - it: should not have any lifecycle hooks
+    asserts:
+      - notExists:
+          path: lifecycleHooks
+
+  - it: if prestop script enabled then valid settings should be present
+    set:
+      preStopScript.enabled: true
+    asserts:
+      - exists:
+          path: spec.template.spec.containers[0].lifecycle.preStop.exec.command
+
+  - it: default resource limits should be empty
+    asserts:
+      - isNullOrEmpty:
+          path: spec.template.spec.containers[0].resources.limits
+      - isNullOrEmpty:
+          path: spec.template.spec.containers[0].resources.requests
+
+  - it: default ports verificaton
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].ports
+          content: 
+              name: https 
+              containerPort: 8443
+              protocol: TCP
+          type: any
+          count: 1
+      - contains:
+          path: spec.template.spec.containers[0].ports
+          content: 
+              name: management 
+              containerPort: 9443
+              protocol: TCP
+          type: any
+          count: 1
+
+  - it: default volume mounts verificaton
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].volumeMounts
+          content: 
+              name: RELEASE-NAME-gateway-license-xml
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/license/license.xml
+              subPath: license.xml
+          type: any
+      - contains:
+          path: spec.template.spec.containers[0].volumeMounts
+          content: 
+              name: RELEASE-NAME-gateway-system-properties
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/conf/system.properties
+              subPath: system.properties
+          type: any
+      - contains:
+          path: spec.template.spec.containers[0].volumeMounts
+          content: 
+              name: RELEASE-NAME-gateway-log-config-override
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/conf/log-override.properties
+              subPath: log-override.properties
+          type: any
+
+  - it: hazelcast volume mount should be present if enabled
+    set:
+      hazelcast.enabled: true
+      hazelcast.externa: true
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].volumeMounts
+          content: 
+              name: RELEASE-NAME-gateway-hazelcast-client
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/assertions/ExternalHazelcastSharedStateProviderAssertion/hazelcast-client.xml
+              subPath: hazelcast-client.xml
+          type: any
+
+  - it: service metrics volume mount should be present if enabled
+    set:
+      serviceMetrics.enabled: true
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].volumeMounts
+          content: 
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/bundle/servicemetrics
+              name: RELEASE-NAME-gateway-service-metrics-configmap
+          type: any
+
+  - it: cwp settings volume mount should be present if enabled
+    set:
+      config.cwp.enabled: true
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].volumeMounts
+          content: 
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/bundle/cwp
+              name: RELEASE-NAME-gateway-cwp-configmap
+          type: any
